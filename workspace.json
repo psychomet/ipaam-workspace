@@ -1,0 +1,8 @@
+{
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json",
+  "version": 2,
+  "projects": {
+    "tobank-app": "apps/tobank-app",
+    "tobank-app-e2e": "apps/tobank-app-e2e"
+  }
+}
