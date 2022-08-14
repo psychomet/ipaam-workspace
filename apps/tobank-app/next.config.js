@@ -16,6 +16,8 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  trailingSlash: true,
+  reactStrictMode: true,
 };
 
 module.exports = withLess(withNx(nextConfig));
