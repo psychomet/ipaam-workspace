@@ -12,6 +12,48 @@ export function Footer(props: FooterProps) {
 
   return (
     <footer className={styles.app__layout__footer}>
+      <div className={`${styles.app__layout__footer__contact_us}`}>
+        <Row>
+          <Col
+            span={16}
+            offset={4}
+            style={{ background: '#fff', height: 100, borderRadius: 10 }}
+          >
+            <Row style={{ height: 100 }} align="middle" justify="space-between">
+              <Col md={{ span: 6 }}>
+                <span
+                  className={`styles.app__layout__footer__list_text`}
+                  style={{ display: 'flex', justifyContent: 'center' }}
+                >
+                  ما را در شبکه های اجتماعی دنبال کنید
+                </span>
+              </Col>
+              <Col md={{ span: 3 }}>
+                <a href="https://www.instagram.com/gardeshpay/">
+                  <img src="/images/Button.svg" alt="" />
+                  <span className={styles.app__layout__footer__list_text}>
+                    بانک گردشگری
+                  </span>
+                </a>
+              </Col>
+              <Col md={{ span: 3, offset: 1 }}>
+                <a href="https://www.instagram.com/tobank.ir/">
+                  <img src="/images/Button.svg" alt="" />
+                  <span className={styles.app__layout__footer__list_text}>
+                    توبانک
+                  </span>
+                </a>
+              </Col>
+              <Col md={{ span: 8 }}>
+                <span className={styles.app__layout__footer__intro_small_text}>
+                  کلیه حقوق این وب‌سایت متعلق به شرکت ایده پرداز دانش نوین آرشام
+                  است .
+                </span>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </div>
       <div className="container">
         <Space direction="vertical" className={'w-100'} size={36}>
           <Row gutter={[45, 45]} align="middle" justify="space-between">
@@ -29,20 +71,10 @@ export function Footer(props: FooterProps) {
                   <span className={styles.app__layout__footer__intro_text}>
                     توبانک،
                     <br></br>
-                    یک نئوبانک همراه شماست!
+                    یک شعبه مجازی همراه شماست!
                   </span>
                 </Col>
               </Row>
-            </Col>
-
-            <Col lg={6}>
-              <Space align="center" size={32}>
-                <img src="/images/Group%2010387.svg" width={93} alt="" />
-                <span className={styles.app__layout__footer__intro_small_text}>
-                  کلیه حقوق این وب‌سایت متعلق به شرکت ایده پرداز دانش نوین آرشام
-                  است .
-                </span>
-              </Space>
             </Col>
           </Row>
           <hr className={styles.app__layout__footer__divider} />
@@ -81,7 +113,7 @@ export function Footer(props: FooterProps) {
             >
               <Space direction="vertical" size={32}>
                 <span className={styles.app__layout__footer__list_title}>
-                  دسترسی سریع
+                  لینک‌های مهم
                 </span>
                 <Space direction="vertical" size={16}>
                   <Link href="/check-services/pichak-system">
@@ -133,32 +165,16 @@ export function Footer(props: FooterProps) {
               </Space>
             </Col>
             <Col
-              xs={{ span: 24 }}
+              xs={24}
               lg={{ span: 6 }}
               className={cx({ 'mt-5': !isDesktop })}
             >
               <Space direction="vertical" size={32}>
                 <span className={styles.app__layout__footer__list_title}>
-                  با ما در ارتباط باشید
+                  مجوز‌‌های ما
                 </span>
-                <Space direction="vertical" size={25}>
-                  <Space size={10}>
-                    <a href="https://www.instagram.com/gardeshpay/">
-                      <img src="/images/Button.svg" alt="" />
-                      <span className={styles.app__layout__footer__list_text}>
-                        بانک گردشگری
-                      </span>
-                    </a>
-                  </Space>
-                  <Space size={10}>
-                    <a href="https://www.instagram.com/tobank.ir/">
-                      <img src="/images/Button.svg" alt="" />
-                      <span className={styles.app__layout__footer__list_text}>
-                        {' '}
-                        توبانک
-                      </span>
-                    </a>
-                  </Space>
+                <Space direction="vertical" size={16}>
+                  <img src="/images/Group%2010387.svg" width={93} alt="" />
                 </Space>
               </Space>
             </Col>

@@ -15,7 +15,7 @@ export function Navbar({ menu }) {
   const [visible, setVisible] = useState(false);
   return (
     <nav className={styles.navbar}>
-      <div className={'container'} style={{ position : 'relative' }}>
+      <div className={'container'} style={{ position: 'relative' }}>
         <Button
           className={styles['menu']}
           type="primary"
@@ -79,11 +79,10 @@ export function Navbar({ menu }) {
           )}
         </Space>
         <div className={styles['download-link']}>
-          <Button href="#download-panel" type="primary" icon={<DownloadOutlined />} size="middle">
-          دانلود توبانک
-        </Button>
+          <Button href="#download-panel" type="primary" size="middle">
+            دانلود توبانک
+          </Button>
         </div>
-        
       </div>
 
       <Drawer
@@ -93,12 +92,11 @@ export function Navbar({ menu }) {
         visible={visible}
       >
         <Menu
-      
-      style={{ width: 256 }}
-      defaultSelectedKeys={['1']}
-      defaultOpenKeys={['sub1']}
-      mode="inline"
-      items= {menuData.map((menu, index) =>
+          style={{ width: 256 }}
+          defaultSelectedKeys={['1']}
+          defaultOpenKeys={['sub1']}
+          mode="inline"
+          items={menuData.map((menu, index) =>
             !menu.subMenu ? (
               <Button
                 className={
@@ -149,7 +147,7 @@ export function Navbar({ menu }) {
               </Dropdown>
             )
           )}
-    />
+        />
       </Drawer>
     </nav>
   );
