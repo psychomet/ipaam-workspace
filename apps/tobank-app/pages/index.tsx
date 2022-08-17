@@ -217,14 +217,18 @@ export function Index() {
           </div>
 
           <Row gutter={[32, 32]}>
-            <Col md={12} sm={24}>
+            <Col
+              md={12}
+              sm={24}
+              style={{ display: 'flex', justifyContent: 'center' }}
+            >
               <img
                 src="/images/newcustomer.png"
                 className={`img-fluid`}
                 alt=""
               />
             </Col>
-            <Col md={16}>
+            <Col md={12}>
               <Row>
                 <Space direction="vertical" align="center">
                   <span className={styles.home__sectionFive__title}>
