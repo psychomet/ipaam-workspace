@@ -210,7 +210,7 @@ export function Index() {
         >
           <div
             style={{
-              position: ' absolute',
+              position: 'absolute',
               right: 0,
               bottom: 0,
             }}
