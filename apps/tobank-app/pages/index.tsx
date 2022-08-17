@@ -204,13 +204,15 @@ export function Index() {
         className={`container`}
         style={{ marginTop: 200, position: 'relative', overflow: ' hidden' }}
       >
-        <div className={styles.home__intro} style={{ overflow: 'hidden' }}>
+        <div
+          className={styles.home__intro}
+          style={{ overflow: 'hidden', position: 'relative' }}
+        >
           <div
             style={{
               position: ' absolute',
               right: 0,
               bottom: 0,
-              paddingRight: 15,
             }}
           >
             <img src="/images/background.png" alt="pic" className="img-fluid" />
@@ -218,7 +220,7 @@ export function Index() {
 
           <Row gutter={[32, 32]}>
             <Col
-              md={12}
+              md={8}
               sm={24}
               style={{ display: 'flex', justifyContent: 'center' }}
             >
@@ -228,7 +230,7 @@ export function Index() {
                 alt=""
               />
             </Col>
-            <Col md={12}>
+            <Col md={16}>
               <Row>
                 <Space direction="vertical" align="center">
                   <span className={styles.home__sectionFive__title}>
