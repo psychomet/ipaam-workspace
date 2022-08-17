@@ -66,9 +66,13 @@ export function Navbar({ menu }) {
                     {menu.children?.map((subMenu, index) => (
                       <Menu.Item key={Math.random().toString(36).substr(2, 9)}>
                         {subMenu.href ? (
-                          <a className={styles.link} href={subMenu.href}>
+                          <Button
+                            type="text"
+                            className={styles.link}
+                            href={subMenu.href}
+                          >
                             {subMenu.label}
-                          </a>
+                          </Button>
                         ) : (
                           <Link href={subMenu.href}>
                             <a className={styles.link}>{subMenu.label}</a>
