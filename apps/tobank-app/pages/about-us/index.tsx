@@ -41,26 +41,26 @@ const AboutUs: React.FC<IProps> = (props) => {
             </Col>
             <Col lg={8}>
               {/*<Space size={[8, 16]} wrap></Space>*/}
-              <div className="tile-columns">
+              <div className={styles.tile__columns}>
                 <img
                   src="/images/tobanklogo.png"
-                  className="img-fluid tile__image"
+                  className={`"img-fluid ${styles.tile__image}`}
                   alt=""
                 />
 
                 <img
                   src="/images/Mask%20group.png"
-                  className="img-fluid tile__image"
+                  className={`"img-fluid ${styles.tile__image}`}
                   alt=""
                 />
                 <img
                   src="/images/neobank.png"
-                  className="img-fluid tile__image"
+                  className={`"img-fluid ${styles.tile__image}`}
                   alt=""
                 />
                 <img
                   src="/images/shape-tobank.png"
-                  className="img-fluid tile__image"
+                  className={`"img-fluid ${styles.tile__image}`}
                   alt=""
                 />
               </div>
@@ -74,26 +74,26 @@ const AboutUs: React.FC<IProps> = (props) => {
           >
             <Col lg={8}>
               {/*<Space size={[8, 16]} wrap></Space>*/}
-              <div className="tile-columns">
+              <div className={styles.tile__columns}>
                 <img
                   src="/images/pardakhtsazi.png"
-                  className="img-fluid tile__image"
+                  className={`"img-fluid ${styles.tile__image}`}
                   alt=""
                 />
                 <img
                   src="/images/gardeshpay.png"
-                  className="img-fluid tile__image"
+                  className={`"img-fluid ${styles.tile__image}`}
                   alt=""
                 />
                 <img
                   src="/images/ipaam.png"
-                  className="img-fluid tile__image"
+                  className={`"img-fluid ${styles.tile__image}`}
                   alt=""
                 />
 
                 <img
                   src="/images/hotel%20sys.png"
-                  className="img-fluid tile__image"
+                  className={`"img-fluid ${styles.tile__image}`}
                   alt=""
                 />
               </div>

@@ -303,7 +303,7 @@ export function Index() {
                 alt=""
               />
             </Col>
-            <Col md={{ span: 14, offset: 1 }}>
+            <Col md={{ span: 12, offset: 1 }}>
               <Space direction="vertical" size={64}>
                 <Title level={2} className={styles.section_title}>
                   شعبه شخصی
