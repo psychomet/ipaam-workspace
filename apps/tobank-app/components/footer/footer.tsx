@@ -39,7 +39,7 @@ export function Footer(props: FooterProps) {
             </Col>
           </Row>
           <Divider className={styles.app__layout__divider} />
-          <Row gutter={isDesktop ? 160 : 40}>
+          <Row gutter={isDesktop ? 80 : 40}>
             <Col xs={24} lg={{ span: 6 }}>
               <Space direction="vertical" size={32}>
                 <span className={styles.app__layout__footer__list_title}>
@@ -135,7 +135,15 @@ export function Footer(props: FooterProps) {
                   مجوز‌‌های ما
                 </span>
                 <Space direction="vertical" size={16}>
-                  <img src="/images/Group%2010387.svg" width={93} alt="" />
+                  <img
+                    referrerpolicy="origin"
+                    id="rgvjjxlznbqefukzjxlzjxlz"
+                    style={{ cursor: 'pointer' }}
+                    onclick='window.open("https://logo.samandehi.ir/Verify.aspx?id=312611&p=xlaorfthuiwkgvkarfthrfth", "Popup","toolbar=no, scrollbars=no, location=no, statusbar=no, menubar=no, resizable=0, width=450, height=630, top=30")'
+                    alt="logo-samandehi"
+                    src="https://logo.samandehi.ir/logo.aspx?id=312611&p=qftinbpdodrfwlbqnbpdnbpd"
+                  />
+                  {/*<img src="/images/Group%2010387.svg" width={93} alt="" />*/}
                 </Space>
               </Space>
             </Col>

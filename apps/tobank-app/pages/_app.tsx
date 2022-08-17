@@ -46,7 +46,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Welcome to tobank-app!</title>
+        <title>توبانک | ToBank</title>
       </Head>
       <main className="app" dir={'rtl'}>
         <ConfigProvider direction="rtl">
