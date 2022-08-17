@@ -1,6 +1,11 @@
 import styles from './footer.module.less';
 import { useMediaQuery } from '../../hooks';
 import { Col, Row, Space, Divider } from 'antd';
+import {
+  PhoneOutlined,
+  MailOutlined,
+  EnvironmentOutlined,
+} from '@ant-design/icons';
 import cx from 'classnames';
 import Link from 'next/link';
 
@@ -42,19 +47,19 @@ export function Footer(props: FooterProps) {
                 </span>
                 <Space direction="vertical" size={16}>
                   <Space>
-                    <img src="/images/Light_Icon.svg" alt="" />
+                    <EnvironmentOutlined />
                     <span className={styles.app__layout__footer__list_text}>
                       تهران،سعادت آباد، بلوار فرهنگ، نبش کوچه نور، پلاک 6
                     </span>
                   </Space>
                   <Space>
-                    <img src="/images/Light_Icon%20(1).svg" alt="" />
+                    <PhoneOutlined />
                     <span className={styles.app__layout__footer__list_text}>
                       021-23950 / داخلی 7
                     </span>
                   </Space>
                   <Space>
-                    <img src="/images/Light_Icon%20(2).svg" alt="" />
+                    <MailOutlined />
                     <span className={styles.app__layout__footer__list_text}>
                       info@tobank.ir
                     </span>
