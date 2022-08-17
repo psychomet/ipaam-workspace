@@ -186,8 +186,7 @@ export function Footer(props: FooterProps) {
             </Col>
             <Col md={{ span: 8 }}>
               <span className={styles.app__layout__footer__intro_small_text}>
-                کلیه حقوق این وب‌سایت متعلق به شرکت ایده پرداز دانش نوین آرشام
-                است .
+                کلیه حقوق این وب‌سایت متعلق به بانک گردشگری است.
               </span>
             </Col>
           </Row>
