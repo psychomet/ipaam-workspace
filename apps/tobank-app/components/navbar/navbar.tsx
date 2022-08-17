@@ -111,7 +111,7 @@ export function Navbar({ menu }) {
       >
         <Menu mode="inline" theme="light" inlineCollapsed={collapsed}>
           <Menu.Item key="1">
-            <Link href="#">خانه</Link>
+            <Link href="/">خانه</Link>
           </Menu.Item>
           <SubMenu key="2" title="خدمات چک">
             <Menu.Item key="3">
