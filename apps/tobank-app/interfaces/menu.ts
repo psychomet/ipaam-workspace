@@ -1,7 +1,7 @@
 export interface IMenu {
   key?: string;
-  title: string;
-  subMenu?: IMenu[];
+  label: string;
+  children?: IMenu[];
   exact?: boolean;
   to?: string;
   active?: string;

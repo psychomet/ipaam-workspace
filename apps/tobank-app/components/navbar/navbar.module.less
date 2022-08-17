@@ -1,13 +1,29 @@
 .navbar {
   background-color: white;
-  padding-left: 2rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 2% 0;
+}
+.side-menu {
+  display: none;
+}
+.menu {
+  margin-right: 25px;
+  padding-top: 1%;
 }
 
-@media (min-width: 992px) {
+.ant-drawer-body {
+  padding: 0 !important;
+}
+@media (max-width: 1032px) {
   .menu {
     display: none;
+  }
+  .side-menu {
+    display: inline-block;
+    margin-left: 15px;
+    margin-right: 5px;
+  }
+  .download-link {
+    left: 3% !important;
   }
 }
 
@@ -17,6 +33,6 @@
 }
 .download-link {
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 1%;
+  bottom: 0;
 }

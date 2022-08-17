@@ -58,7 +58,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
             <>
               <Navbar menu={Menu} />
               <Layout>
-                {/*<Sidebar menu={Menu} />*/}
+                {/* <Sidebar menu={Menu} /> */}
                 <Layout.Content className="content">
                   <Component {...pageProps} />
                 </Layout.Content>

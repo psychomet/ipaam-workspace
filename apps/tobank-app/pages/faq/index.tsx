@@ -17,7 +17,7 @@ import { CaretLeftOutlined } from '@ant-design/icons';
 import { CaretRightOutlined } from '@ant-design/icons';
 import { useMediaQuery } from '../../hooks';
 import { FAQData } from '../../mocks/faq-data';
-import { menuData } from '../../mocks/menu-data';
+import { items } from '../../mocks/menu-data';
 
 const { Title, Text } = Typography;
 const { Panel } = Collapse;
@@ -77,7 +77,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       layout: 'master',
-      name: menuData[2].subMenu[1].title,
+      name: items[2].children[1].label,
     },
   };
 };

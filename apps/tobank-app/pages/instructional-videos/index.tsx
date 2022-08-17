@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Space, Typography, Card } from 'antd';
 import styles from './styles.module.less';
-import { menuData } from '../../mocks/menu-data';
+import { items } from '../../mocks/menu-data';
 
 const { Title, Text } = Typography;
 
@@ -216,7 +216,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       layout: 'master',
-      name: menuData[2].subMenu[0].title,
+      name: items[2].children[0].label,
     },
   };
 };

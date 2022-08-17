@@ -69,7 +69,7 @@ export function Index() {
           // this.androidAddress = ;
           setAndroidAddress({
             regular: res?.data?.link,
-            armeab: res.data.link_32,
+            armeab: res?.data?.link_32,
           });
           // this.setState({
           //   isLoaded: true,
@@ -124,20 +124,18 @@ export function Index() {
                   گرفته تا صندوق سرمایه‌گذاری و ثبت‌نام وام ازدواج.
                 </Text>
 
-                <Row
-                  className="mt-5 flex-container"
-                  gutter={[isDesktop ? 32 : 0, 16]}
-                >
-                  <Col>
+                <Row className="mt-5 flex-container">
+                  <Col md={12}>
                     <Button
                       href="#download-panel"
                       type="primary"
                       size="large"
-                      className="mx-2"
                       icon={<DownloadOutlined />}
                     >
                       دانلود اپلیکیشن
                     </Button>
+                  </Col>
+                  <Col md={12}>
                     <Button type="text" size="large" href="/faq">
                       چطور کار می‌کند؟
                       <LeftCircleOutlined style={{ marginTop: 5 }} />
@@ -184,12 +182,7 @@ export function Index() {
       >
         <Space direction="vertical" size={56} align="center">
           <span className={styles.home__sectionThree__title}>خدمات توبانک</span>
-          <Row
-            gutter={[0, 32]}
-            style={{
-              paddingRight: 160,
-            }}
-          >
+          <Row gutter={[32, 32]}>
             {homeData.sectionThree.map((item, index) => (
               <Col lg={6} key={index} xs={{ span: 12 }}>
                 <Space size={16}>
@@ -208,13 +201,28 @@ export function Index() {
         </Space>
       </div>
       <div
-        className={`${styles.home__sectionFive__absolute__image_2} container`}
+        className={`container`}
         style={{ marginTop: 200, position: 'relative', overflow: ' hidden' }}
       >
-        <div className={styles.home__intro}>
-          <Row gutter={[32, 43]}>
-            <Col md={8}>
-              <img src="/images/3.png" className={`img-fluid`} alt="" />
+        <div className={styles.home__intro} style={{ overflow: 'hidden' }}>
+          <div
+            style={{
+              position: ' absolute',
+              right: 0,
+              bottom: 0,
+              paddingRight: 15,
+            }}
+          >
+            <img src="/images/background.png" alt="pic" className="img-fluid" />
+          </div>
+
+          <Row gutter={[32, 32]}>
+            <Col md={12} sm={24}>
+              <img
+                src="/images/newcustomer.png"
+                className={`img-fluid`}
+                alt=""
+              />
             </Col>
             <Col md={16}>
               <Row>
@@ -314,10 +322,25 @@ export function Index() {
         </div>
       </div>
 
-      <div className="container" id="download-panel">
+      <div
+        className="container"
+        id="download-panel"
+        style={{ position: 'relative' }}
+      >
+        <div className={`${styles.home__sectionSix__qr_code}`}>
+          <img
+            src="/images/qr_code_tobank.png"
+            className={`img-fluid`}
+            alt=""
+          />
+          <Space align="center" direction="vertical" style={{ margin: 30 }}>
+            <span>برای دانلود اسکن کنید</span>
+            <a href="www.tobank.ir">www.tobank.ir</a>
+          </Space>
+        </div>
         <div className={styles.home__sectionSix__card}>
-          <Row gutter={[32, 32]} align="middle" justify="space-between">
-            <Col lg={15}>
+          <Row gutter={[8, 8]} align="middle">
+            <Col md={16}>
               <Row gutter={[16, 16]}>
                 <Col lg={12}>
                   <Space direction="vertical" size={32}>
@@ -383,14 +406,6 @@ export function Index() {
                   </Space>
                 </Col>
               </Row>
-            </Col>
-            <Col>
-              <div></div>
-              <img
-                src="/images/qr_code_tobank.png"
-                className={`${styles.home__sectionSix__image} img-fluid`}
-                alt=""
-              />
             </Col>
           </Row>
         </div>

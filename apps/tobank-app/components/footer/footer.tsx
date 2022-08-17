@@ -1,6 +1,6 @@
 import styles from './footer.module.less';
 import { useMediaQuery } from '../../hooks';
-import { Col, Row, Space } from 'antd';
+import { Col, Row, Space, Divider } from 'antd';
 import cx from 'classnames';
 import Link from 'next/link';
 
@@ -12,54 +12,12 @@ export function Footer(props: FooterProps) {
 
   return (
     <footer className={styles.app__layout__footer}>
-      <div className={`${styles.app__layout__footer__contact_us}`}>
-        <Row>
-          <Col
-            span={16}
-            offset={4}
-            style={{ background: '#fff', height: 100, borderRadius: 10 }}
-          >
-            <Row style={{ height: 100 }} align="middle" justify="space-between">
-              <Col md={{ span: 6 }}>
-                <span
-                  className={`styles.app__layout__footer__list_text`}
-                  style={{ display: 'flex', justifyContent: 'center' }}
-                >
-                  ما را در شبکه های اجتماعی دنبال کنید
-                </span>
-              </Col>
-              <Col md={{ span: 3 }}>
-                <a href="https://www.instagram.com/gardeshpay/">
-                  <img src="/images/Button.svg" alt="" />
-                  <span className={styles.app__layout__footer__list_text}>
-                    بانک گردشگری
-                  </span>
-                </a>
-              </Col>
-              <Col md={{ span: 3, offset: 1 }}>
-                <a href="https://www.instagram.com/tobank.ir/">
-                  <img src="/images/Button.svg" alt="" />
-                  <span className={styles.app__layout__footer__list_text}>
-                    توبانک
-                  </span>
-                </a>
-              </Col>
-              <Col md={{ span: 8 }}>
-                <span className={styles.app__layout__footer__intro_small_text}>
-                  کلیه حقوق این وب‌سایت متعلق به شرکت ایده پرداز دانش نوین آرشام
-                  است .
-                </span>
-              </Col>
-            </Row>
-          </Col>
-        </Row>
-      </div>
       <div className="container">
         <Space direction="vertical" className={'w-100'} size={36}>
           <Row gutter={[45, 45]} align="middle" justify="space-between">
             <Col lg={14}>
               <Row gutter={56} wrap={false} align="middle">
-                <Col>
+                <Col md={8}>
                   <img
                     src="/images/tobank-logo.svg"
                     alt=""
@@ -67,17 +25,15 @@ export function Footer(props: FooterProps) {
                     width={300}
                   />
                 </Col>
-                <Col>
+                <Col md={24}>
                   <span className={styles.app__layout__footer__intro_text}>
-                    توبانک،
-                    <br></br>
-                    یک شعبه مجازی همراه شماست!
+                    توبانک، یک شعبه مجازی همراه شماست!
                   </span>
                 </Col>
               </Row>
             </Col>
           </Row>
-          <hr className={styles.app__layout__footer__divider} />
+          <Divider className={styles.app__layout__divider} />
           <Row gutter={isDesktop ? 160 : 40}>
             <Col xs={24} lg={{ span: 6 }}>
               <Space direction="vertical" size={32}>
@@ -177,6 +133,43 @@ export function Footer(props: FooterProps) {
                   <img src="/images/Group%2010387.svg" width={93} alt="" />
                 </Space>
               </Space>
+            </Col>
+          </Row>
+          <Row
+            className={`${styles.app__layout__footer__contact_us}`}
+            gutter={[12, 12]}
+            align="middle"
+            style={{ minHeight: 100 }}
+          >
+            <Col md={{ span: 8 }}>
+              <span
+                className={`styles.app__layout__footer__list_text`}
+                style={{ display: 'flex', justifyContent: 'center' }}
+              >
+                ما را در شبکه های اجتماعی دنبال کنید
+              </span>
+            </Col>
+            <Col md={{ span: 4 }}>
+              <a href="https://www.instagram.com/gardeshpay/">
+                <img src="/images/Button.svg" alt="" />
+                <span className={styles.app__layout__footer__list_text}>
+                  بانک گردشگری
+                </span>
+              </a>
+            </Col>
+            <Col md={{ span: 4 }}>
+              <a href="https://www.instagram.com/tobank.ir/">
+                <img src="/images/Button.svg" alt="" />
+                <span className={styles.app__layout__footer__list_text}>
+                  توبانک
+                </span>
+              </a>
+            </Col>
+            <Col md={{ span: 8 }}>
+              <span className={styles.app__layout__footer__intro_small_text}>
+                کلیه حقوق این وب‌سایت متعلق به شرکت ایده پرداز دانش نوین آرشام
+                است .
+              </span>
             </Col>
           </Row>
         </Space>

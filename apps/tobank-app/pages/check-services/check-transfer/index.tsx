@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { PageHeader, Space, Typography, List, Row, Col, Card } from 'antd';
-import { menuData } from '../../../mocks/menu-data';
+import { items } from '../../../mocks/menu-data';
 
 const { Title, Text } = Typography;
 
@@ -10,7 +10,7 @@ interface IProps {}
 const CheckTransfer: React.FC<IProps> = (props: any) => {
   return (
     <div className="container">
-      <PageHeader title={props.pageProps.name}>
+      <PageHeader title={props.label}>
         <Space direction="vertical" size={16}>
           <Title level={5}>
             طبق اطلاع رسانی قرار بر ثبت چک ها در سامانه صیاد است، این سامانه
@@ -434,7 +434,8 @@ export const getStaticProps = async () => {
   return {
     props: {
       layout: 'master',
-      name: menuData[1].subMenu[1].title,
+      name: items[1].children[1].label,
+      // name: menuData[1].subMenu[1].title,
     },
   };
 };

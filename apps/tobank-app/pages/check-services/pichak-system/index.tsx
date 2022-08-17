@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { PageHeader, Space, Typography, List, Row, Col, Card } from 'antd';
-import { menuData } from '../../../mocks/menu-data';
+import { items } from '../../../mocks/menu-data';
 
 const { Title, Text } = Typography;
 
@@ -11,7 +11,7 @@ const PichakSystem: React.FC<IProps> = (props: any) => {
   return (
     <div className="container">
       <PageHeader>
-        <Title level={2}>{props.pageProps.name}</Title>
+        <Title level={2}>{props.label}</Title>
 
         <Space direction="vertical" size={16}>
           <Title level={2}>سامانه پیچک چیست؟</Title>
@@ -103,7 +103,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       layout: 'master',
-      name: menuData[1].subMenu[0].title,
+      name: items[1].children[0].label,
     },
   };
 };

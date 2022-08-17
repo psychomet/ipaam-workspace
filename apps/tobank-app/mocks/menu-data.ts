@@ -1,61 +1,36 @@
 import { IMenu } from '../interfaces/menu';
 
-export const menuData: IMenu[] = [
-  {
-    title: 'خانه',
-    to: '/',
-  },
-  {
-    title: 'خدمات چک',
-    subMenu: [
-      {
-        title: ' سامانه پیچک',
-        to: '/check-services/pichak-system',
-      },
-      {
-        title: 'ثبت، تایید و انتقال چک',
-        to: '/check-services/check-transfer',
-      },
-      {
-        title: 'چک تایید شده',
-        to: '/check-services/check-guide',
-      },
-    ],
-  },
-  {
-    title: 'آموزش',
-    subMenu: [
-      {
-        title: 'ویدیوهای آموزشی',
-        to: '/instructional-videos',
-      },
-      {
-        title: 'سوالات متداول',
-        to: '/faq',
-      },
-    ],
-  },
-  {
-    title: 'قوانین و مقررات',
-    to: '/terms',
-  },
-  {
-    title: 'پذیرندگان',
-    subMenu: [
-      {
-        title: 'IPG',
-        to: '.',
-        href: 'https://gardeshpay.ir/',
-      },
-      {
-        title: 'POS',
-        to: '.',
-        href: 'https://gardeshpay.ir/pos',
-      },
-    ],
-  },
-  {
-    title: 'درباره ما',
-    to: '/about-us',
-  },
+function getItem(
+  label: React.ReactNode,
+  key: React.Key,
+  href: string,
+  children?: IMenu[],
+  type?: 'group'
+): IMenu {
+  return {
+    key,
+    children,
+    label,
+    type,
+    href,
+  } as IMenu;
+}
+
+export const items: IMenu[] = [
+  getItem('خانه', '1', '/'),
+  getItem('خدمات چک', '2', null, [
+    getItem(' سامانه پیچک', '3', '/check-services/pichak-system'),
+    getItem('ثبت، تایید و انتقال چک', '4', '/check-services/check-transfer'),
+    getItem(' چک تایید شده', '5', '/check-services/check-guide'),
+  ]),
+  getItem('آموزش', '6', null, [
+    getItem(' ویدیوهای آموزشی', '7', '/instructional-videos'),
+    getItem('سوالات متداول', '8', '/faq'),
+  ]),
+  getItem('قوانین و مقررات', '9', '/terms'),
+  getItem('پذیرندگان', '10', null, [
+    getItem(' IPG', '11', 'https://gardeshpay.ir/'),
+    getItem('POS', '12', 'https://gardeshpay.ir/pos'),
+  ]),
+  getItem('درباره ما', '13', '/about-us'),
 ];
