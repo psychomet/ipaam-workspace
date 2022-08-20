@@ -17,6 +17,7 @@ import SubMenu from 'antd/lib/menu/SubMenu';
 
 /* eslint-disable-next-line */
 export interface NavbarProps {}
+
 type IMenu = Required<MenuProps>['items'][number];
 
 const onClick: MenuProps['onClick'] = (e) => {
@@ -66,13 +67,11 @@ export function Navbar({ menu }) {
                     {menu.children?.map((subMenu, index) => (
                       <Menu.Item key={Math.random().toString(36).substr(2, 9)}>
                         {subMenu.href ? (
-                          <Button
-                            type="text"
-                            className={styles.link}
-                            href={subMenu.href}
-                          >
-                            {subMenu.label}
-                          </Button>
+                          <a href={subMenu.href}>
+                            <Button type="text" className={styles.link}>
+                              {subMenu.label}
+                            </Button>
+                          </a>
                         ) : (
                           <Link href={subMenu.href}>
                             <a className={styles.link}>{subMenu.label}</a>
@@ -101,9 +100,11 @@ export function Navbar({ menu }) {
           )}
         </Space>
         <div className={styles['download-link']}>
-          <Button href="#download-panel" type="primary" size="middle">
-            دانلود توبانک
-          </Button>
+          <a href="/#download-panel">
+            <Button type="primary" size="middle">
+              دانلود توبانک
+            </Button>
+          </a>
         </div>
       </div>
       <Drawer

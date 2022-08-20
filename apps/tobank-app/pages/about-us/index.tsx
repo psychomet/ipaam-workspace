@@ -39,7 +39,7 @@ const AboutUs: React.FC<IProps> = (props) => {
                 </Text>
               </Space>
             </Col>
-            <Col lg={8}>
+            <Col>
               {/*<Space size={[8, 16]} wrap></Space>*/}
               <div className={styles.tile__columns}>
                 <img
@@ -72,7 +72,7 @@ const AboutUs: React.FC<IProps> = (props) => {
             wrap={isMobile}
             gutter={[32, 32]}
           >
-            <Col lg={8}>
+            <Col>
               {/*<Space size={[8, 16]} wrap></Space>*/}
               <div className={styles.tile__columns}>
                 <img

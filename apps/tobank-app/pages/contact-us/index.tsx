@@ -115,7 +115,7 @@ const ContactUs: React.FC<IProps> = (props) => {
             <Row gutter={[56, 32]} align="middle">
               <Col>
                 <img
-                  src="/images/3d-24-hour-customer-service%20(1).png"
+                  src="/images/3d-24-hour-customer-service.png"
                   className="img-fluid"
                   alt=""
                 />

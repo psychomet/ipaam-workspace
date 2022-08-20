@@ -176,15 +176,12 @@ export function Index() {
           </Col>
         </Row>
       </div>
-      <div
-        className="container"
-        style={{ zIndex: 500, marginTop: 100, marginBottom: 100 }}
-      >
+      <div className="container" style={{ zIndex: 500, marginTop: 100 }}>
         <Space direction="vertical" size={56} align="center">
           <span className={styles.home__sectionThree__title}>خدمات توبانک</span>
           <Row gutter={[32, 32]}>
             {homeData.sectionThree.map((item, index) => (
-              <Col lg={6} key={index} xs={{ span: 12 }}>
+              <Col xs={24} sm={12} lg={6} key={index}>
                 <Space size={16}>
                   <img
                     src={item.image}
@@ -202,7 +199,7 @@ export function Index() {
       </div>
       <div
         className={`container`}
-        style={{ marginTop: 200, position: 'relative', overflow: ' hidden' }}
+        style={{ marginTop: 100, position: 'relative', overflow: ' hidden' }}
       >
         <div
           className={styles.home__intro}

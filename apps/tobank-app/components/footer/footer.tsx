@@ -55,13 +55,13 @@ export function Footer(props: FooterProps) {
                   <Space>
                     <PhoneOutlined />
                     <span className={styles.app__layout__footer__list_text}>
-                      021-23950 / داخلی 7
+                      <a href="tel:+982123950"> 021-23950 / داخلی 7</a>
                     </span>
                   </Space>
                   <Space>
                     <MailOutlined />
                     <span className={styles.app__layout__footer__list_text}>
-                      info@tobank.ir
+                      <a href="mailto:info@tobank.ir">info@tobank.ir</a>
                     </span>
                   </Space>
                 </Space>
