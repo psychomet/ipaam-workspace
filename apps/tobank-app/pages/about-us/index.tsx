@@ -54,7 +54,7 @@ const AboutUs: React.FC<IProps> = (props) => {
                   alt=""
                 />
                 <img
-                  src="/images/neobank.png"
+                  src="/images/Group%2010269.png"
                   className={`"img-fluid ${styles.tile__image}`}
                   alt=""
                 />
