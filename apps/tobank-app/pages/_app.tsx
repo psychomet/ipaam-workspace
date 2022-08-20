@@ -9,7 +9,8 @@ import { ReactElement, useEffect, useState } from 'react';
 import { ConfigProvider, Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
 import { Layout } from 'antd';
-import { Footer, Navbar, Sidebar, TopicMenu } from '../components';
+import { Footer, HtmlMeta, Navbar, Sidebar, TopicMenu } from '../components';
+import { HelmetProvider } from 'react-helmet-async';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   const topics = ['First topic', 'Second topic', 'Third topic'];
@@ -45,30 +46,37 @@ function CustomApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <Head>
-        <title>توبانک | ToBank</title>
-        <link rel="shortcut icon" href="/favicon.ico" />
-      </Head>
-      <main className="app" dir={'rtl'}>
-        <ConfigProvider direction="rtl">
-          {pageLoading ? (
-            <div className="loading-page">
-              <Spin indicator={<LoadingOutlined style={{ fontSize: 45 }} />} />
-            </div>
-          ) : (
-            <>
-              <Navbar menu={Menu} />
-              <Layout>
-                {/* <Sidebar menu={Menu} /> */}
-                <Layout.Content className="content">
-                  <Component {...pageProps} />
-                </Layout.Content>
-                <Footer />
-              </Layout>
-            </>
-          )}
-        </ConfigProvider>
-      </main>
+      <HelmetProvider>
+        {/*<Head>*/}
+        {/*  */}
+        {/*  <title>توبانک | ToBank</title>*/}
+        {/*  <link rel="shortcut icon" href="/favicon.ico" />*/}
+        {/*</Head>*/}
+        <HtmlMeta title={pageProps?.name} />
+
+        <main className="app" dir={'rtl'}>
+          <ConfigProvider direction="rtl">
+            {pageLoading ? (
+              <div className="loading-page">
+                <Spin
+                  indicator={<LoadingOutlined style={{ fontSize: 45 }} />}
+                />
+              </div>
+            ) : (
+              <>
+                <Navbar menu={Menu} />
+                <Layout>
+                  {/* <Sidebar menu={Menu} /> */}
+                  <Layout.Content className="content">
+                    <Component {...pageProps} />
+                  </Layout.Content>
+                  <Footer />
+                </Layout>
+              </>
+            )}
+          </ConfigProvider>
+        </main>
+      </HelmetProvider>
     </>
   );
 }
