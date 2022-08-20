@@ -120,7 +120,7 @@ export function Navbar({ menu }) {
           </Menu.Item>
           <SubMenu key="2" title="خدمات چک">
             <Menu.Item key="3">
-              <Link href="/check-services/pichak-system">سامانه پیچک</Link>
+              <Link href="/check-services/pichak-system">چک صیادی</Link>
             </Menu.Item>
             <Menu.Item key="4">
               <Link href="/check-services/check-transfer">

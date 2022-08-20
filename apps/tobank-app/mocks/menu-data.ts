@@ -19,7 +19,7 @@ function getItem(
 export const items: IMenu[] = [
   getItem('خانه', '1', '/'),
   getItem('خدمات چک', '2', null, [
-    getItem(' سامانه پیچک', '3', '/check-services/pichak-system'),
+    getItem(' چک صیادی', '3', '/check-services/pichak-system'),
     getItem('ثبت، تایید و انتقال چک', '4', '/check-services/check-transfer'),
     getItem(' چک تایید شده', '5', '/check-services/check-guide'),
   ]),

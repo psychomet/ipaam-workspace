@@ -82,7 +82,7 @@ const ContactUs: React.FC<IProps> = (props) => {
                   ما را در شبکه‌‌ های اجتماعی دنبال کنید ‌
                 </span>
                 <Space size={10}>
-                  <a href="https://www.instagram.com/gardeshpay/">
+                  <a href="https://instagram.com/tourism.bank?igshid=YmMyMTA2M2Y=">
                     <img
                       src="/images/Button.svg"
                       className={styles.contactus__social_media__logo}
@@ -112,7 +112,7 @@ const ContactUs: React.FC<IProps> = (props) => {
                 href="https://www.google.com/maps/place/Tourism+bank+central+building/@35.7767682,51.3846946,18z/data=!4m5!3m4!1s0x3f8e07b4798fbebf:0xd088fd53f30c7068!8m2!3d35.7767357!4d51.3858115"
                 target="_blank"
               >
-                <img src="/images/maps%201.png" className="img-fluid" alt="" />
+                <img src="/images/map.png" className="img-fluid" alt="" />
               </a>
             </Col>
           </Row>

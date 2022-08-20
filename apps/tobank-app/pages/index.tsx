@@ -295,7 +295,7 @@ export function Index() {
           <Row gutter={32} align="middle">
             <Col md={{ span: 8, offset: 1 }}>
               <img
-                src="/images/شعبه شخصی.png"
+                src="/images/شعبه شخصی@2x.svg"
                 className={`${styles.home__edgeImagePhone} img-fluid`}
                 alt=""
               />

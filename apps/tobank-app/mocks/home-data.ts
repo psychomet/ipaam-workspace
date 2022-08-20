@@ -26,7 +26,7 @@ export const homeData = {
     },
     {
       image: '/images/Group 10362.svg',
-      label: 'سامانه پیچک',
+      label: 'چک صیادی',
     },
     {
       image: '/images/Group 10359.svg',
