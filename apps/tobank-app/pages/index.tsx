@@ -249,7 +249,7 @@ export function Index() {
               </Row>
               <Row gutter={[32, 32]} style={{ marginTop: 50 }}>
                 {homeData.sectionFive.map((item, index) => (
-                  <Col className="gutter-row" span={12}>
+                  <Col className="gutter-row" xs={24} sm={12}>
                     <div className={styles.home__sectionFive__featureBox}>
                       <Space size={6} direction="horizontal" align="center">
                         <img src={item.image} className="img-fluid" alt="" />
@@ -301,7 +301,7 @@ export function Index() {
               />
             </Col>
             <Col md={{ span: 12, offset: 1 }}>
-              <Space direction="vertical" size={64}>
+              <Space direction="vertical" size={32}>
                 <Title level={2} className={styles.section_title}>
                   شعبه شخصی
                   <span className="primary-color"> توبانک</span>
