@@ -170,18 +170,22 @@ export function Footer(props: FooterProps) {
             </Col>
             <Col md={{ span: 4 }}>
               <a href="https://instagram.com/tourism.bank?igshid=YmMyMTA2M2Y=">
-                <img src="/images/Button.svg" alt="" />
-                <span className={styles.app__layout__footer__list_text}>
-                  بانک گردشگری
-                </span>
+                <Space>
+                  <img src="/images/Button.svg" alt="" />
+                  <span className={styles.app__layout__footer__list_text}>
+                    بانک گردشگری
+                  </span>
+                </Space>
               </a>
             </Col>
             <Col md={{ span: 4 }}>
               <a href="https://www.instagram.com/tobank.ir/">
-                <img src="/images/Button.svg" alt="" />
-                <span className={styles.app__layout__footer__list_text}>
-                  توبانک
-                </span>
+                <Space>
+                  <img src="/images/Button.svg" alt="" />
+                  <span className={styles.app__layout__footer__list_text}>
+                    توبانک
+                  </span>
+                </Space>
               </a>
             </Col>
             <Col md={{ span: 8 }}>

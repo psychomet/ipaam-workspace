@@ -35,77 +35,85 @@ export function Navbar({ menu }) {
   return (
     <nav className={styles.navbar}>
       <div className={'container'} style={{ position: 'relative' }}>
-        <Button
-          className={styles['side-menu']}
-          type="primary"
-          icon={<MenuOutlined />}
-          onClick={() => setVisible(true)}
-        />
-        <a href="/">
-          <img src="/images/tobank-logo.svg" className="img-fluid" alt="logo" />
-        </a>
-        <Space className={styles.menu}>
-          {items.map((menu, index) =>
-            !menu.children ? (
-              <Button
-                className={
-                  (pathname === menu.active || pathname === menu.to) &&
-                  styles.navLinkActive
-                }
-                key={Math.random().toString(36).substr(2, 9)}
-                type="text"
-              >
-                <Link href={menu.href || '.'}>
-                  <a className={styles.link}>{menu.label}</a>
-                </Link>
-              </Button>
-            ) : (
-              <Dropdown
-                key={Math.random().toString(36).substr(2, 9)}
-                overlay={
-                  <Menu>
-                    {menu.children?.map((subMenu, index) => (
-                      <Menu.Item key={Math.random().toString(36).substr(2, 9)}>
-                        {subMenu.href ? (
-                          <a href={subMenu.href}>
-                            <Button type="text" className={styles.link}>
-                              {subMenu.label}
-                            </Button>
-                          </a>
-                        ) : (
-                          <Link href={subMenu.href}>
-                            <a className={styles.link}>{subMenu.label}</a>
-                          </Link>
-                        )}
-                      </Menu.Item>
-                    ))}
-                  </Menu>
-                }
-              >
+        <Space align={'center'}>
+          <Button
+            className={styles['side-menu']}
+            type="primary"
+            icon={<MenuOutlined />}
+            onClick={() => setVisible(true)}
+          />
+          <a href="/">
+            <img
+              src="/images/tobank-logo.svg"
+              className="img-fluid"
+              alt="logo"
+            />
+          </a>
+          <Space className={styles.menu}>
+            {items.map((menu, index) =>
+              !menu.children ? (
                 <Button
                   className={
-                    (pathname === menu.active || pathname === menu.href) &&
+                    (pathname === menu.active || pathname === menu.to) &&
                     styles.navLinkActive
                   }
+                  key={Math.random().toString(36).substr(2, 9)}
                   type="text"
-                  onClick={(e) => e.preventDefault()}
                 >
-                  <Space>
-                    <span className={styles.link}> {menu.label}</span>{' '}
-                    <DownOutlined />
-                  </Space>
+                  <Link href={menu.href || '.'}>
+                    <a className={styles.link}>{menu.label}</a>
+                  </Link>
                 </Button>
-              </Dropdown>
-            )
-          )}
+              ) : (
+                <Dropdown
+                  key={Math.random().toString(36).substr(2, 9)}
+                  overlay={
+                    <Menu>
+                      {menu.children?.map((subMenu, index) => (
+                        <Menu.Item
+                          key={Math.random().toString(36).substr(2, 9)}
+                        >
+                          {subMenu.href ? (
+                            <a href={subMenu.href}>
+                              <Button type="text" className={styles.link}>
+                                {subMenu.label}
+                              </Button>
+                            </a>
+                          ) : (
+                            <Link href={subMenu.href}>
+                              <a className={styles.link}>{subMenu.label}</a>
+                            </Link>
+                          )}
+                        </Menu.Item>
+                      ))}
+                    </Menu>
+                  }
+                >
+                  <Button
+                    className={
+                      (pathname === menu.active || pathname === menu.href) &&
+                      styles.navLinkActive
+                    }
+                    type="text"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    <Space>
+                      <span className={styles.link}> {menu.label}</span>{' '}
+                      <DownOutlined />
+                    </Space>
+                  </Button>
+                </Dropdown>
+              )
+            )}
+          </Space>
+          <div className={styles['download-link']}>
+            <a href="/#download-panel">
+              <Button type="primary" size="middle">
+                دانلود توبانک
+              </Button>
+            </a>
+          </div>
         </Space>
-        <div className={styles['download-link']}>
-          <a href="/#download-panel">
-            <Button type="primary" size="middle">
-              دانلود توبانک
-            </Button>
-          </a>
-        </div>
       </div>
       <Drawer
         bodyStyle={{ padding: 0 }}

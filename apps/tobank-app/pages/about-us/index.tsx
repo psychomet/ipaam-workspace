@@ -39,7 +39,7 @@ const AboutUs: React.FC<IProps> = (props) => {
                 </Text>
               </Space>
             </Col>
-            <Col xs={24}>
+            <Col flex="auto">
               {/*<Space size={[8, 16]} wrap></Space>*/}
               <div className={styles.tile__columns}>
                 <img
@@ -66,63 +66,63 @@ const AboutUs: React.FC<IProps> = (props) => {
               </div>
             </Col>
           </Row>
-          <Row
-            justify="space-between"
-            align="middle"
-            wrap={isMobile}
-            gutter={[32, 32]}
-          >
-            <Col>
-              {/*<Space size={[8, 16]} wrap></Space>*/}
-              <div className={styles.tile__columns}>
-                <img
-                  src="/images/pardakhtsazi.png"
-                  className={`img-fluid ${styles.tile__image}`}
-                  alt=""
-                />
-                <img
-                  src="/images/gardeshpay.png"
-                  className={`img-fluid ${styles.tile__image}`}
-                  alt=""
-                />
-                <img
-                  src="/images/ipaam.png"
-                  className={`img-fluid ${styles.tile__image}`}
-                  alt=""
-                />
+          {/*<Row*/}
+          {/*  justify="space-between"*/}
+          {/*  align="middle"*/}
+          {/*  wrap={isMobile}*/}
+          {/*  gutter={[32, 32]}*/}
+          {/*>*/}
+          {/*  <Col>*/}
+          {/*    /!*<Space size={[8, 16]} wrap></Space>*!/*/}
+          {/*    <div className={styles.tile__columns}>*/}
+          {/*      <img*/}
+          {/*        src="/images/pardakhtsazi.png"*/}
+          {/*        className={`img-fluid ${styles.tile__image}`}*/}
+          {/*        alt=""*/}
+          {/*      />*/}
+          {/*      <img*/}
+          {/*        src="/images/gardeshpay.png"*/}
+          {/*        className={`img-fluid ${styles.tile__image}`}*/}
+          {/*        alt=""*/}
+          {/*      />*/}
+          {/*      <img*/}
+          {/*        src="/images/ipaam.png"*/}
+          {/*        className={`img-fluid ${styles.tile__image}`}*/}
+          {/*        alt=""*/}
+          {/*      />*/}
 
-                <img
-                  src="/images/hotel%20sys.png"
-                  className={`img-fluid ${styles.tile__image}`}
-                  alt=""
-                />
-              </div>
-            </Col>
-            <Col flex="auto">
-              <Space direction="vertical" size={16}>
-                <span className={styles.aboutus__title}>درباره ایپام</span>
-                <Text className={styles.aboutus__text}>
-                  شرکت دانش‌بنیان ایده‌ پرداز دانش نوین آرشام (ایپام)، با اخذ
-                  مجوزهای پرداخت‌یاری و پرداخت‌سازی از بانک مرکزی جمهوری اسلامی
-                  و شاپرک، به ارائه خدمات و راه‌کارهای بی‌همتا در حوزه‌های مالی
-                  همچون بانکداری مجازی، بانکداری باز، اینشورتک و سوپرمارکت مالی
-                  می‌پردازد. این شرکت می‌کوشد تا با استفاده از فناوری‌های نوین و
-                  مبتکرانه، متخصصین توانمند این حوزه و زیرساخت‌های فنی
-                  منحصربه‌فرد، صنعت بزرگ فین‌تک را در ایران هم‌سطح با پیشرفت‌های
-                  جهانی ارتقا دهد.
-                </Text>
-                <Text className={styles.aboutus__text}>
-                  از اهداف و چشم‌اندازهای مرکز نوآوری مالی ایپام، تبدیل این شرکت
-                  به جامع‌ترین و کامل‌ترین برند تسهیل کننده و ارائه‌دهنده خدمات
-                  پرداخت در سطح کشور و تبدیل به بزرگ‌ترین مرکز نوآوری تخصصی کشور
-                  در حوزه صنعت بزرگ فین‌تک کشور می‌باشد. این اهداف با بکارگیری
-                  نیروهای متخصص و جوان، ورود و استفاده از برترین ایده‌های نوآوری
-                  در حوزه مالی کشور و تلاش برای ارتقاء سطح کیفی حوزه‌های مذکور
-                  کاملا در دسترس است.
-                </Text>
-              </Space>
-            </Col>
-          </Row>
+          {/*      <img*/}
+          {/*        src="/images/hotel%20sys.png"*/}
+          {/*        className={`img-fluid ${styles.tile__image}`}*/}
+          {/*        alt=""*/}
+          {/*      />*/}
+          {/*    </div>*/}
+          {/*  </Col>*/}
+          {/*  <Col flex="auto">*/}
+          {/*    <Space direction="vertical" size={16}>*/}
+          {/*      <span className={styles.aboutus__title}>درباره ایپام</span>*/}
+          {/*      <Text className={styles.aboutus__text}>*/}
+          {/*        شرکت دانش‌بنیان ایده‌ پرداز دانش نوین آرشام (ایپام)، با اخذ*/}
+          {/*        مجوزهای پرداخت‌یاری و پرداخت‌سازی از بانک مرکزی جمهوری اسلامی*/}
+          {/*        و شاپرک، به ارائه خدمات و راه‌کارهای بی‌همتا در حوزه‌های مالی*/}
+          {/*        همچون بانکداری مجازی، بانکداری باز، اینشورتک و سوپرمارکت مالی*/}
+          {/*        می‌پردازد. این شرکت می‌کوشد تا با استفاده از فناوری‌های نوین و*/}
+          {/*        مبتکرانه، متخصصین توانمند این حوزه و زیرساخت‌های فنی*/}
+          {/*        منحصربه‌فرد، صنعت بزرگ فین‌تک را در ایران هم‌سطح با پیشرفت‌های*/}
+          {/*        جهانی ارتقا دهد.*/}
+          {/*      </Text>*/}
+          {/*      <Text className={styles.aboutus__text}>*/}
+          {/*        از اهداف و چشم‌اندازهای مرکز نوآوری مالی ایپام، تبدیل این شرکت*/}
+          {/*        به جامع‌ترین و کامل‌ترین برند تسهیل کننده و ارائه‌دهنده خدمات*/}
+          {/*        پرداخت در سطح کشور و تبدیل به بزرگ‌ترین مرکز نوآوری تخصصی کشور*/}
+          {/*        در حوزه صنعت بزرگ فین‌تک کشور می‌باشد. این اهداف با بکارگیری*/}
+          {/*        نیروهای متخصص و جوان، ورود و استفاده از برترین ایده‌های نوآوری*/}
+          {/*        در حوزه مالی کشور و تلاش برای ارتقاء سطح کیفی حوزه‌های مذکور*/}
+          {/*        کاملا در دسترس است.*/}
+          {/*      </Text>*/}
+          {/*    </Space>*/}
+          {/*  </Col>*/}
+          {/*</Row>*/}
         </Space>
       </PageHeader>
     </div>

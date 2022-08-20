@@ -47,6 +47,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>توبانک | ToBank</title>
+        <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <main className="app" dir={'rtl'}>
         <ConfigProvider direction="rtl">
