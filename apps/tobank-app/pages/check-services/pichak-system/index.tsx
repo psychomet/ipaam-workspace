@@ -21,7 +21,6 @@ const PichakSystem: React.FC<IProps> = (props: any) => {
         <Row gutter={[16, 16]} justify="space-between">
           <Col lg={8}>
             <List
-              header={<div>ویژگی‌های چک صیادی</div>}
               dataSource={[
                 'ثبت اطلاعات چک صادر شده (صدور چک)',
                 'ثبت اطلاعات چک دریافت شده (دریافت چک)',
