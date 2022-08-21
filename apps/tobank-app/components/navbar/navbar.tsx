@@ -259,24 +259,16 @@ export function Navbar({ menu }) {
             <Link href="/about-us">درباره ما</Link>
           </Menu.Item>
         </Menu>
-        <div className={'container-fluid'}>
-          <div
-            className={styles['buttons']}
-            style={{ width: '165px !important' }}
-          >
-            <a
-              href="/#download-panel"
+        <div className={`${(styles['buttons'], styles['menuButtons'])}`}>
+          <a href="/#download-panel" style={{ width: '100%', height: '100%' }}>
+            <Button
+              type="primary"
+              size="middle"
               style={{ width: '100%', height: '100%' }}
             >
-              <Button
-                type="primary"
-                size="middle"
-                style={{ width: '100%', height: '100%' }}
-              >
-                دانلود توبانک
-              </Button>
-            </a>
-          </div>
+              دانلود توبانک
+            </Button>
+          </a>
         </div>
       </Drawer>
     </nav>
