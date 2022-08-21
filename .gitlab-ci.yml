@@ -35,7 +35,7 @@ deploy_project:
   image: localregistry.gardeshpay.ir:5000/sshpass
   stage: deploy
   only:
-    - master
+    - main
   before_script:
     - eval $(ssh-agent -s)
     - echo '-----BEGIN RSA PRIVATE KEY-----' > key
