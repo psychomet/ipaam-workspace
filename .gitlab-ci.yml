@@ -1,0 +1,48 @@
+stages: # List of stages for jobs, and their order of execution
+  - dependencies
+  - build
+  - deploy
+
+install_dependencies:
+  image: localregistry.gardeshpay.ir:5000/node:14-latest
+  stage: dependencies
+  script:
+    - npm install
+  cache:
+    key:
+      files:
+        - package-lock.json
+    paths:
+      - node_modules
+
+build_project:
+  image: localregistry.gardeshpay.ir:5000/node:14-latest
+  stage: build
+  script:
+    - npm run build
+    - npm run export
+  artifacts:
+    paths:
+      - $CI_PROJECT_DIR/dist/apps/tobank-app/exported
+  cache:
+    key:
+      files:
+        - package-lock.json
+    paths:
+      - node_modules
+
+deploy_project:
+  image: localregistry.gardeshpay.ir:5000/sshpass
+  stage: deploy
+  only:
+    - master
+  before_script:
+    - eval $(ssh-agent -s)
+    - echo '-----BEGIN RSA PRIVATE KEY-----' > key
+    - echo $SSH_KEY | tr ' ' '\n' >> key
+    - echo '-----END RSA PRIVATE KEY-----' >> key
+    - chmod 600 key
+    - ssh-add key
+  script:
+    - scp -P $DESTPORT -i key -o stricthostkeychecking=no -r dist $DESTUSER@$DESTIP:$DESTPATH
+    - scp -P $DESTPORT -i key -o stricthostkeychecking=no -r dist $DESTUSER@$DESTIP2:$DESTPATH
