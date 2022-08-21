@@ -20,9 +20,14 @@ export function Footer(props: FooterProps) {
       <div className="container">
         <Space direction="vertical" className={'w-100'} size={36}>
           <Row gutter={[45, 45]} align="middle" justify="space-between">
-            <Col lg={14}>
-              <Row gutter={56} wrap={false} align="middle">
-                <Col md={8}>
+            <Col xs={24} lg={14}>
+              <Row
+                gutter={[56, 32]}
+                wrap={!isDesktop}
+                align="middle"
+                justify={!isDesktop ? 'center' : 'start'}
+              >
+                <Col xs={24} sm={8}>
                   <img
                     src="/images/tobank-logo.svg"
                     alt=""
@@ -30,7 +35,7 @@ export function Footer(props: FooterProps) {
                     width={300}
                   />
                 </Col>
-                <Col md={24}>
+                <Col xs={24} md={16}>
                   <span className={styles.app__layout__footer__intro_text}>
                     توبانک، یک شعبه مجازی همراه شماست!
                   </span>
@@ -163,7 +168,7 @@ export function Footer(props: FooterProps) {
             align="middle"
             style={{ minHeight: 100 }}
           >
-            <Col md={{ span: 8 }}>
+            <Col xs={24} md={{ span: 8 }}>
               <span
                 className={`styles.app__layout__footer__list_text`}
                 style={{ display: 'flex', justifyContent: 'center' }}
@@ -171,7 +176,7 @@ export function Footer(props: FooterProps) {
                 ما را در شبکه های اجتماعی دنبال کنید
               </span>
             </Col>
-            <Col md={{ span: 4 }}>
+            <Col style={{ textAlign: 'right' }} xs={24} md={{ span: 4 }}>
               <a href="https://instagram.com/tourism.bank?igshid=YmMyMTA2M2Y=">
                 <Space>
                   <img src="/images/Button.svg" alt="" />
@@ -181,7 +186,7 @@ export function Footer(props: FooterProps) {
                 </Space>
               </a>
             </Col>
-            <Col md={{ span: 4 }}>
+            <Col style={{ textAlign: 'right' }} xs={24} md={{ span: 4 }}>
               <a href="https://www.instagram.com/tobank.ir/">
                 <Space>
                   <img src="/images/Button.svg" alt="" />
