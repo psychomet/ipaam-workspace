@@ -13,6 +13,7 @@ import { items } from '../../mocks/menu-data';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import SubMenu from 'antd/lib/menu/SubMenu';
+import { useMediaQuery } from '../../hooks';
 
 /* eslint-disable-next-line */
 export interface NavbarProps {}
@@ -32,9 +33,10 @@ function flatten(arr) {
   }, []);
 }
 export function Navbar({ menu }) {
+  const isDesktop = useMediaQuery('(min-width: 1366px)');
+
   const { pathname, route, query } = useRouter();
   const [visible, setVisible] = useState(false);
-  const [collapsed, setCollapsed] = useState(false);
   const [selectedKey, setSelectedKey] = useState(
     flatten(items).find((_item) => _item?.href === pathname)?.key
   );
@@ -45,9 +47,6 @@ export function Navbar({ menu }) {
     );
   }, [pathname]);
 
-  const toggleCollapsed = () => {
-    setCollapsed(!collapsed);
-  };
   return (
     <nav className={styles.navbar}>
       <div
@@ -187,87 +186,40 @@ export function Navbar({ menu }) {
               <Link href="/about-us">درباره ما</Link>
             </Menu.Item>
           </Menu>
-
-          {/* {items.map((menu, index) =>
-              !menu.children ? (
-                <Button
-                  className={
-                    (pathname === menu.active || pathname === menu.to) &&
-                    styles.navLinkActive
-                  }
-                  key={Math.random().toString(36).substr(2, 9)}
-                  type="text"
-                >
-                  <Link href={menu.href || '.'}>
-                    <a className={styles.link}>{menu.label}</a>
-                  </Link>
-                </Button>
-              ) : (
-                <Dropdown
-                  key={Math.random().toString(36).substr(2, 9)}
-                  overlay={
-                    <Menu>
-                      {menu.children?.map((subMenu, index) => (
-                        <Menu.Item
-                          key={Math.random().toString(36).substr(2, 9)}
-                        >
-                          {subMenu.href ? (
-                            <a href={subMenu.href}>
-                              <Button type="text" className={styles.link}>
-                                {subMenu.label}
-                              </Button>
-                            </a>
-                          ) : (
-                            <Link href={subMenu.href}>
-                              <a className={styles.link}>{subMenu.label}</a>
-                            </Link>
-                          )}
-                        </Menu.Item>
-                      ))}
-                    </Menu>
-                  }
-                >
-                  <Button
-                    className={
-                      (pathname === menu.active || pathname === menu.href) &&
-                      styles.navLinkActive
-                    }
-                    type="text"
-                    onClick={(e) => e.preventDefault()}
-                  >
-                    <Space>
-                      <span className={styles.link}> {menu.label}</span>{' '}
-                      <DownOutlined />
-                    </Space>
-                  </Button>
-                </Dropdown>
-              )
-            )} */}
         </div>
-        <div
-          className={styles['buttons']}
-          style={{ width: '165px !important' }}
-        >
-          <a href="/#download-panel" style={{ width: '100%', height: '100%' }}>
-            <Button
-              type="primary"
-              size="middle"
+        {isDesktop && (
+          <div
+            className={styles['buttons']}
+            style={{ width: '165px !important' }}
+          >
+            <a
+              href="/#download-panel"
               style={{ width: '100%', height: '100%' }}
             >
-              دانلود توبانک
-            </Button>
-          </a>
-        </div>
+              <Button
+                type="primary"
+                size="middle"
+                style={{ width: '100%', height: '100%' }}
+              >
+                دانلود توبانک
+              </Button>
+            </a>
+          </div>
+        )}
       </div>
       <Drawer
         bodyStyle={{ padding: 0 }}
         placement="right"
         onClose={() => setVisible(false)}
         visible={visible}
-        className="container-fluid"
       >
-        <Menu mode="inline" theme="light" inlineCollapsed={collapsed}>
-          <Menu.Item key="1">
+        <Menu
+          mode="inline"
+          theme="light"
+          inlineCollapsed={false}
+          selectedKeys={[selectedKey]}
+        >
+          <Menu.Item key="home">
             <Link href="/">خانه</Link>
           </Menu.Item>
           <SubMenu key="2" title="خدمات چک">
@@ -307,6 +259,25 @@ export function Navbar({ menu }) {
             <Link href="/about-us">درباره ما</Link>
           </Menu.Item>
         </Menu>
+        <div className={'container-fluid'}>
+          <div
+            className={styles['buttons']}
+            style={{ width: '165px !important' }}
+          >
+            <a
+              href="/#download-panel"
+              style={{ width: '100%', height: '100%' }}
+            >
+              <Button
+                type="primary"
+                size="middle"
+                style={{ width: '100%', height: '100%' }}
+              >
+                دانلود توبانک
+              </Button>
+            </a>
+          </div>
+        </div>
       </Drawer>
     </nav>
   );

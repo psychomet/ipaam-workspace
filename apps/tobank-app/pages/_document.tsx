@@ -35,14 +35,6 @@ export default class CustomDocument extends Document {
         <body>
           <Main />
           <NextScript />
-
-          <style
-            id={DISABLE_SSR_TRANSITION}
-            // eslint-disable-next-line react/no-danger
-            dangerouslySetInnerHTML={{
-              __html: '*, *::before, *::after { transition: none !important; }',
-            }}
-          />
         </body>
       </Html>
     );
