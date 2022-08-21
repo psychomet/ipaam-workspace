@@ -114,22 +114,33 @@ export function Index() {
               />
             </Col>
             <Col md={12} style={{ paddingTop: '40px' }}>
-              <Space
-                className="h-100 justify-content-center"
-                direction="vertical"
-                align="center"
-              >
-                <Title level={!isDesktop ? 3 : 1}>
-                  <span className="primary-color">توبانک،</span> یک شعبه مجازی
-                  همراه شماست!
-                </Title>
-                <Text className={styles.home__intro__text}>
-                  روی گوشیت حساب باز کن! از احراز هویت آنلاین و افتتاح سپرده آنی
-                  گرفته تا صندوق سرمایه‌گذاری و ثبت‌نام وام ازدواج.
-                </Text>
-
-                <Row className="mt-5 flex-container">
-                  <Col md={12}>
+              <Space className="h-100" direction="vertical">
+                <Row>
+                  <Title
+                    level={!isDesktop ? 3 : 1}
+                    style={{ fontSize: '30px', fontWeight: 'bolder' }}
+                  >
+                    <span className="primary-color">توبانک،</span> یک شعبه مجازی
+                    همراه شماست!
+                  </Title>
+                </Row>
+                <Row>
+                  <Text
+                    className={styles.home__intro__text}
+                    style={{
+                      fontSize: '18px',
+                      margin: '3rem 0',
+                      lineHeight: '1.8',
+                    }}
+                  >
+                    روی گوشیت حساب باز کن!
+                    <br />
+                    از احراز هویت آنلاین و افتتاح سپرده آنی گرفته تا صندوق
+                    سرمایه‌گذاری و ثبت‌نام وام ازدواج.
+                  </Text>
+                </Row>
+                <Row className="flex-container">
+                  <Col md={{ span: 6 }}>
                     <Button
                       href="#download-panel"
                       type="primary"
@@ -139,7 +150,7 @@ export function Index() {
                       دانلود اپلیکیشن
                     </Button>
                   </Col>
-                  <Col md={12}>
+                  <Col md={{ span: 6, offset: 2 }}>
                     <Button type="text" size="large" href="/faq">
                       چطور کار می‌کند؟
                       <LeftCircleOutlined style={{ marginTop: 5 }} />
