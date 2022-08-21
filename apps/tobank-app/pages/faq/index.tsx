@@ -35,38 +35,37 @@ const FAQ: React.FC<IProps> = (props) => {
 
   return (
     <div className="container">
-      <PageHeader title="سوالات متداول">
-        <div className={styles.faq_row}>
-          <Col xs={24} flex="300px" className={styles.faq_containers}>
-            <Menu
-              mode={isMobile ? 'horizontal' : 'vertical'}
-              defaultSelectedKeys={['1']}
-              onClick={selectedItem}
-            >
-              {FAQData.map((item) => (
-                <Menu.Item key={item.id}>{item.title}</Menu.Item>
-              ))}
-            </Menu>
-          </Col>
-          <Col xs={24} flex="auto">
-            <Collapse
-              defaultActiveKey={['1']}
-              expandIcon={({ isActive }) => (
-                <CaretLeftOutlined rotate={isActive ? 90 : 0} />
-              )}
-            >
-              {questions.data.map((item) => (
-                <Panel
-                  header={item.title}
-                  key={Math.random().toString(36).substr(2, 9)}
-                >
-                  <p>{item.description}</p>
-                </Panel>
-              ))}
-            </Collapse>
-          </Col>
-        </div>
-      </PageHeader>
+      <PageHeader title="سوالات متداول"> </PageHeader>
+      <div className={styles.faq_row}>
+        <Col xs={24} flex="300px" className={styles.faq_containers}>
+          <Menu
+            mode={isMobile ? 'horizontal' : 'vertical'}
+            defaultSelectedKeys={['1']}
+            onClick={selectedItem}
+          >
+            {FAQData.map((item) => (
+              <Menu.Item key={item.id}>{item.title}</Menu.Item>
+            ))}
+          </Menu>
+        </Col>
+        <Col xs={24} flex="auto">
+          <Collapse
+            defaultActiveKey={['1']}
+            expandIcon={({ isActive }) => (
+              <CaretLeftOutlined rotate={isActive ? 90 : 0} />
+            )}
+          >
+            {questions.data.map((item) => (
+              <Panel
+                header={item.title}
+                key={Math.random().toString(36).substr(2, 9)}
+              >
+                <p>{item.description}</p>
+              </Panel>
+            ))}
+          </Collapse>
+        </Col>
+      </div>
       <br></br>
     </div>
   );

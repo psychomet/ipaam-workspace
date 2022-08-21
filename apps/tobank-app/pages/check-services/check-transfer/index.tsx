@@ -10,7 +10,7 @@ interface IProps {}
 const CheckTransfer: React.FC<IProps> = (props: any) => {
   return (
     <div className="container">
-      <PageHeader title={props.label}>
+      <PageHeader title="ثبت، تایید و انتقال چک">
         <Space direction="vertical" size={16}>
           <Title level={5}>
             طبق اطلاع رسانی قرار بر ثبت چک ها در سامانه صیاد است، این سامانه
