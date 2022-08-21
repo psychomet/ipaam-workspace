@@ -16,15 +16,9 @@ const AboutUs: React.FC<IProps> = (props) => {
     <div className="container">
       <PageHeader title="درباره ما">
         <Space direction="vertical" className="w-100" size={36}>
-          <Row
-            justify="space-between"
-            gutter={[32, 32]}
-            align="middle"
-            wrap={isMobile}
-          >
+          <Row justify="space-between" gutter={[32, 32]} wrap={isMobile}>
             <Col flex="auto">
-              <Space direction="vertical" size={16}>
-                <span className={styles.aboutus__title}>درباره توبانک</span>
+              <Space direction="vertical" size={12}>
                 <Text className={styles.aboutus__text}>
                   {' '}
                   توبانک یکی از محصولات شرکت دانش‌بنیان ایپام است که پس از کسب
@@ -134,7 +128,6 @@ export const getStaticProps = async () => {
   return {
     props: {
       layout: 'master',
-      name: 'درباره ما',
     },
   };
 };

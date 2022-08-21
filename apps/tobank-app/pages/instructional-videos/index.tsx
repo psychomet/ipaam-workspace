@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Space, Typography, Card } from 'antd';
+import { Space, Typography, Card, PageHeader } from 'antd';
 import styles from './styles.module.less';
 import { items } from '../../mocks/menu-data';
 
@@ -11,6 +11,7 @@ interface IProps {}
 const CheckGuide: React.FC<IProps> = (props) => {
   return (
     <div className="container">
+      <PageHeader title="فیلم های آموزشی"></PageHeader>
       <div className={styles.videos_container} style={{ display: 'flex' }}>
         <Card className={styles.video_card}>
           <div className={styles.video_item}>

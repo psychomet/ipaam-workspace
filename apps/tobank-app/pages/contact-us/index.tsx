@@ -30,11 +30,11 @@ const ContactUs: React.FC<IProps> = (props) => {
   return (
     <div className="container">
       <PageHeader title="تماس با ما">
-        <Space direction="vertical" className="w-100" size={36}>
+        <Space direction="vertical" className="w-100" size={64}>
           <Row gutter={[16, 16]}>
             <Col xs={24} lg={8}>
               <div className={styles.contactus__card}>
-                <Space direction="horizontal" size={16}>
+                <Space direction="vertical" size={16}>
                   <img
                     src="/images/vuesax_outline_location.svg"
                     className="img-fluid"
@@ -48,7 +48,7 @@ const ContactUs: React.FC<IProps> = (props) => {
             </Col>
             <Col xs={24} lg={8}>
               <div className={styles.contactus__card}>
-                <Space direction="horizontal" size={16}>
+                <Space direction="vertical" size={16}>
                   <img
                     src="/images/vuesax_outline_sms.svg"
                     className="img-fluid"
@@ -62,7 +62,7 @@ const ContactUs: React.FC<IProps> = (props) => {
             </Col>
             <Col xs={24} lg={8}>
               <div className={styles.contactus__card}>
-                <Space direction="horizontal" size={16}>
+                <Space direction="vertical" size={16}>
                   <img
                     src="/images/vuesax_outline_call.svg"
                     className="img-fluid"

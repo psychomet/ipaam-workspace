@@ -10,9 +10,7 @@ interface IProps {}
 const PichakSystem: React.FC<IProps> = (props: any) => {
   return (
     <div className="container">
-      <PageHeader>
-        <Title level={2}>{props.label}</Title>
-
+      <PageHeader title={props.label}>
         <Space direction="vertical" size={16}>
           <Title level={2}>چک صیادی چیست؟</Title>
           <Text>

@@ -1,13 +1,19 @@
 .navbar {
   background-color: white;
-  padding: 16px 0;
+  padding: 2rem 0 0.75rem 0;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.05);
 }
 .side-menu {
   display: none;
 }
-.menu {
-  margin-right: 25px;
-  //padding-top: 1%;
+.buttons {
+  width: 150px;
+  float: right;
+  height: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .ant-drawer-body {
@@ -15,15 +21,11 @@
 }
 @media (max-width: 1032px) {
   .menu {
-    display: none;
+    visibility: hidden;
   }
   .side-menu {
     display: inline-block;
-    margin-left: 15px;
-    margin-right: 5px;
-  }
-  .download-link {
-    left: 3% !important;
+    float: right;
   }
 }
 .logo {
@@ -31,7 +33,12 @@
   margin-left: 1rem;
 }
 .download-link {
-  position: absolute;
-  left: 1%;
-  bottom: 0;
+  width: 110px;
+  height: 35px;
+  float: right;
+}
+.ant-menu-horizontal > .ant-menu-item::after,
+.ant-menu-horizontal > .ant-menu-submenu::after {
+  border-bottom: none !important;
+  transition: none !important;
 }

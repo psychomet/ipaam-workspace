@@ -1,7 +1,11 @@
 import styles from './index.module.less';
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from '../hooks';
-import { DownloadOutlined, LeftCircleOutlined } from '@ant-design/icons';
+import {
+  DownloadOutlined,
+  LeftCircleOutlined,
+  InfoCircleFilled,
+} from '@ant-design/icons';
 import { Button, Col, Modal, Row, Space, Typography } from 'antd';
 const { Title, Text } = Typography;
 import cx from 'classnames';
@@ -338,14 +342,16 @@ export function Index() {
           />
           <Space align="center" direction="vertical" style={{ margin: 30 }}>
             <span>برای دانلود اسکن کنید</span>
-            <a href="www.tobank.ir">www.tobank.ir</a>
+            <a style={{ color: '#000' }} href="www.tobank.ir">
+              www.tobank.ir
+            </a>
           </Space>
         </div>
         <div className={styles.home__sectionSix__card}>
           <Row gutter={[8, 8]} align="middle">
-            <Col md={16}>
+            <Col md={24}>
               <Row gutter={[16, 16]}>
-                <Col lg={12}>
+                <Col lg={{ span: 6, offset: 1 }}>
                   <Space direction="vertical" size={32}>
                     <Space size={15}>
                       <img
@@ -372,7 +378,7 @@ export function Index() {
                     </Row>
                   </Space>
                 </Col>
-                <Col lg={12}>
+                <Col lg={{ span: 6, offset: 2 }}>
                   <Space direction="vertical" size={32}>
                     <Space size={16}>
                       <img
@@ -407,6 +413,37 @@ export function Index() {
                       </Col>
                     </Row>
                   </Space>
+                </Col>
+                <Col
+                  lg={{ span: 6, offset: 2 }}
+                  style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    paddingTop: '1rem',
+                    width: '100%',
+                  }}
+                >
+                  <Row className={styles.getVersion} align="middle">
+                    <a
+                      href="/instructional-videos"
+                      style={{
+                        color: '#000',
+                        display: 'flex',
+                        alignItems: 'center',
+                      }}
+                    >
+                      <InfoCircleFilled style={{ fontSize: '1.5rem' }} />
+                      <span
+                        style={{
+                          marginRight: '1rem',
+                          fontSize: '14px',
+                          fontWeight: 'bold',
+                        }}
+                      >
+                        راهنمای دانلود نسخه مستقیم iOS
+                      </span>
+                    </a>
+                  </Row>
                 </Col>
               </Row>
             </Col>

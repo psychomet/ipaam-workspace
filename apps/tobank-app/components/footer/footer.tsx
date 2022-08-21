@@ -46,19 +46,19 @@ export function Footer(props: FooterProps) {
                   ارتباط با ما
                 </span>
                 <Space direction="vertical" size={16}>
-                  <Space>
+                  <Space direction="horizontal">
                     <EnvironmentOutlined />
                     <span className={styles.app__layout__footer__list_text}>
                       تهران،سعادت آباد، بلوار فرهنگ، نبش کوچه نور، پلاک 6
                     </span>
                   </Space>
-                  <Space>
+                  <Space direction="horizontal">
                     <PhoneOutlined />
                     <span className={styles.app__layout__footer__list_text}>
                       <a href="tel:+982123950"> 021-23950 / داخلی 7</a>
                     </span>
                   </Space>
-                  <Space>
+                  <Space direction="horizontal">
                     <MailOutlined />
                     <span className={styles.app__layout__footer__list_text}>
                       <a href="mailto:info@tobank.ir">info@tobank.ir</a>
@@ -78,9 +78,12 @@ export function Footer(props: FooterProps) {
                 </span>
                 <Space direction="vertical" size={16}>
                   <Link href="/check-services/pichak-system">
-                    <span className={styles.app__layout__footer__list_text}>
+                    <a
+                      href="/check-services/pichak-system"
+                      className={styles.app__layout__footer__list_text}
+                    >
                       چک صیادی درتوبانک
-                    </span>
+                    </a>
                   </Link>
                   <a
                     href="https://gardeshpay.ir/"
@@ -108,19 +111,19 @@ export function Footer(props: FooterProps) {
                 </span>
                 <Space direction="vertical" size={16}>
                   <Link href="/terms">
-                    <span className={styles.app__layout__footer__list_text}>
+                    <a className={styles.app__layout__footer__list_text}>
                       قوانین و مقررات
-                    </span>
+                    </a>
                   </Link>
                   <Link href="/faq">
-                    <span className={styles.app__layout__footer__list_text}>
+                    <a className={styles.app__layout__footer__list_text}>
                       سوالات متداول
-                    </span>
+                    </a>
                   </Link>
                   <Link href="/contact-us">
-                    <span className={styles.app__layout__footer__list_text}>
+                    <a className={styles.app__layout__footer__list_text}>
                       تماس با ما
-                    </span>
+                    </a>
                   </Link>
                 </Space>
               </Space>
