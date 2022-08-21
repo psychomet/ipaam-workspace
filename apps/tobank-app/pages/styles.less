@@ -41,10 +41,28 @@
   background: #ed2027;
   right: 50%;
 }
-.ant-menu-submenu > .ant-menu {
+.ant-menu-vertical.ant-menu-sub:not([class*='-active']) {
   margin-top: 50px;
   margin-right: 150px;
 }
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu:hover::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-active::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-active::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-open::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-open::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-submenu-selected::after {
+  border-bottom: none !important;
+}
 .ant-menu-item a {
   font-size: 1rem;
+}
+.ant-menu-submenu-popup {
+  width: 100px !important;
+  top: 50px !important;
+  right: 50px;
+}
+.ant-menu-submenu-popup > .ant-menu-sub > .ant-menu-item a {
+  font-size: 0.8rem !important;
 }
