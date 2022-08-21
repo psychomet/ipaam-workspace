@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Drawer, Button, Space, Dropdown, Menu, Row } from 'antd';
 import {
   MenuOutlined,
@@ -28,6 +28,17 @@ export function Navbar({ menu }) {
   const { pathname, route, query } = useRouter();
   const [visible, setVisible] = useState(false);
   const [collapsed, setCollapsed] = useState(false);
+  const [selectedKey, setSelectedKey] = useState(
+    items.find((_item) => _item?.href === pathname)?.key
+  );
+
+  useEffect(() => {
+    setSelectedKey(items.find((_item) => _item?.href === pathname)?.key);
+  }, [pathname]);
+
+  useEffect(() => {
+    console.log('selectedKey', selectedKey);
+  }, [selectedKey]);
 
   const toggleCollapsed = () => {
     setCollapsed(!collapsed);
@@ -63,7 +74,7 @@ export function Navbar({ menu }) {
           <Menu
             mode="horizontal"
             defaultActiveFirst={true}
-            defaultSelectedKeys={['home']}
+            selectedKeys={[selectedKey]}
             style={{ fontSize: '1rem', borderBottomStyle: 'hidden' }}
           >
             <Menu.Item key="home">

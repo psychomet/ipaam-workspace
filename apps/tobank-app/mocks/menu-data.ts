@@ -17,7 +17,7 @@ function getItem(
 }
 
 export const items: IMenu[] = [
-  getItem('خانه', '1', '/'),
+  getItem('خانه', 'home', '/'),
   getItem('خدمات چک', '2', null, [
     getItem(' چک صیادی', '3', '/check-services/pichak-system'),
     getItem('ثبت، تایید و انتقال چک', '4', '/check-services/check-transfer'),
