@@ -12,7 +12,6 @@ import styles from './navbar.module.less';
 import { items } from '../../mocks/menu-data';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import Col from 'antd/es/grid/col';
 import SubMenu from 'antd/lib/menu/SubMenu';
 
 /* eslint-disable-next-line */
@@ -23,22 +22,28 @@ type IMenu = Required<MenuProps>['items'][number];
 const onClick: MenuProps['onClick'] = (e) => {
   console.log('click ', e);
 };
-
+function flatten(arr) {
+  return arr.reduce(function (flat, toFlatten) {
+    return flat.concat(
+      Array.isArray(toFlatten?.children)
+        ? flatten(toFlatten?.children)
+        : toFlatten
+    );
+  }, []);
+}
 export function Navbar({ menu }) {
   const { pathname, route, query } = useRouter();
   const [visible, setVisible] = useState(false);
   const [collapsed, setCollapsed] = useState(false);
   const [selectedKey, setSelectedKey] = useState(
-    items.find((_item) => _item?.href === pathname)?.key
+    flatten(items).find((_item) => _item?.href === pathname)?.key
   );
 
   useEffect(() => {
-    setSelectedKey(items.find((_item) => _item?.href === pathname)?.key);
+    setSelectedKey(
+      flatten(items).find((_item) => _item?.href === pathname)?.key
+    );
   }, [pathname]);
-
-  useEffect(() => {
-    console.log('selectedKey', selectedKey);
-  }, [selectedKey]);
 
   const toggleCollapsed = () => {
     setCollapsed(!collapsed);
@@ -73,7 +78,6 @@ export function Navbar({ menu }) {
         >
           <Menu
             mode="horizontal"
-            defaultActiveFirst={true}
             selectedKeys={[selectedKey]}
             style={{ fontSize: '1rem', borderBottomStyle: 'hidden' }}
           >
