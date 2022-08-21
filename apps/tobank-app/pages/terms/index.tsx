@@ -17,7 +17,7 @@ const Terms: React.FC<IProps> = (props) => {
         <Title level={3} className="text-center">
           شرایط و مقررات ارائه خدمات توبانک
         </Title>
-        <Title level={4}>حدود مسئولیت و شرایط بانک :</Title>
+        <Title level={4}>حدود مسئولیت و شرایط بانک </Title>
         <Space direction="vertical" size={16}>
           <Title level={5}>امنیت سپرده‌ها و تضامین</Title>
           <Text>
