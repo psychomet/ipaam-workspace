@@ -10,6 +10,7 @@ import { Button, Col, Modal, Row, Space, Typography } from 'antd';
 const { Title, Text } = Typography;
 import cx from 'classnames';
 import { homeData } from '../mocks/home-data';
+import { spawn } from 'child_process';
 
 export function Index() {
   /*
@@ -139,7 +140,7 @@ export function Index() {
                     سرمایه‌گذاری و ثبت‌نام وام ازدواج.
                   </Text>
                 </Row>
-                <Row className="flex-container">
+                <Row className={`${styles.home__resBtn} flex-container`}>
                   <Col md={{ span: 6 }}>
                     <Button
                       href="#download-panel"
@@ -173,7 +174,7 @@ export function Index() {
                 علاوه بر کارت‌های متنوع بانک گردشگری، رنگ کارت بانکی خودتون رو
                 نیز انتخاب کنید.
               </Text>
-              <Space>
+              <Space className={styles.home__sectionSix__color_cards}>
                 <img
                   src="/images/رنگ کارت های بانکی.png"
                   alt="pic"
@@ -230,11 +231,14 @@ export function Index() {
             <img src="/images/background.png" alt="pic" className="img-fluid" />
           </div>
 
-          <Row gutter={[32, 32]}>
+          <Row gutter={[0, 32]}>
             <Col
-              md={8}
-              sm={24}
-              style={{ display: 'flex', justifyContent: 'center' }}
+              md={{ span: 8 }}
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                width: '100%',
+              }}
             >
               <img
                 src="/images/newcustomer.png"
@@ -242,7 +246,7 @@ export function Index() {
                 alt=""
               />
             </Col>
-            <Col md={16}>
+            <Col md={{ span: 14, offset: 2 }}>
               <Row>
                 <Space direction="vertical" align="center">
                   <span className={styles.home__sectionFive__title}>
@@ -428,10 +432,9 @@ export function Index() {
                 <Col
                   lg={{ span: 6, offset: 2 }}
                   style={{
-                    display: 'flex',
-                    justifyContent: 'center',
                     paddingTop: '1rem',
                     width: '100%',
+                    height: '45px',
                   }}
                 >
                   <Row className={styles.getVersion} align="middle">

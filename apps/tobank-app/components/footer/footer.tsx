@@ -18,7 +18,7 @@ export function Footer(props: FooterProps) {
   return (
     <footer className={styles.app__layout__footer}>
       <div className="container">
-        <Space direction="vertical" className={'w-100'} size={36}>
+        <Space direction="vertical" className={'w-100'} size={24}>
           <Row gutter={[45, 45]} align="middle" justify="space-between">
             <Col xs={24} lg={14}>
               <Row
@@ -176,7 +176,7 @@ export function Footer(props: FooterProps) {
                 ما را در شبکه های اجتماعی دنبال کنید
               </span>
             </Col>
-            <Col style={{ textAlign: 'right' }} xs={24} md={{ span: 4 }}>
+            <Col style={{ textAlign: 'right' }} xs={12} md={{ span: 4 }}>
               <a href="https://instagram.com/tourism.bank?igshid=YmMyMTA2M2Y=">
                 <Space>
                   <img src="/images/Button.svg" alt="" />
@@ -186,7 +186,7 @@ export function Footer(props: FooterProps) {
                 </Space>
               </a>
             </Col>
-            <Col style={{ textAlign: 'right' }} xs={24} md={{ span: 4 }}>
+            <Col style={{ textAlign: 'right' }} xs={12} md={{ span: 4 }}>
               <a href="https://www.instagram.com/tobank.ir/">
                 <Space>
                   <img src="/images/Button.svg" alt="" />
