@@ -10,6 +10,7 @@ import { Button, Col, Modal, Row, Space, Typography } from 'antd';
 const { Title, Text } = Typography;
 import cx from 'classnames';
 import { homeData } from '../mocks/home-data';
+import { spawn } from 'child_process';
 
 export function Index() {
   /*
@@ -114,22 +115,33 @@ export function Index() {
               />
             </Col>
             <Col md={12} style={{ paddingTop: '40px' }}>
-              <Space
-                className="h-100 justify-content-center"
-                direction="vertical"
-                align="center"
-              >
-                <Title level={!isDesktop ? 3 : 1}>
-                  <span className="primary-color">توبانک،</span> یک شعبه مجازی
-                  همراه شماست!
-                </Title>
-                <Text className={styles.home__intro__text}>
-                  روی گوشیت حساب باز کن! از احراز هویت آنلاین و افتتاح سپرده آنی
-                  گرفته تا صندوق سرمایه‌گذاری و ثبت‌نام وام ازدواج.
-                </Text>
-
-                <Row className="mt-5 flex-container">
-                  <Col md={12}>
+              <Space className="h-100" direction="vertical">
+                <Row>
+                  <Title
+                    level={!isDesktop ? 3 : 1}
+                    style={{ fontSize: '30px', fontWeight: 'bolder' }}
+                  >
+                    <span className="primary-color">توبانک،</span> یک شعبه مجازی
+                    همراه شماست!
+                  </Title>
+                </Row>
+                <Row>
+                  <Text
+                    className={styles.home__intro__text}
+                    style={{
+                      fontSize: '18px',
+                      margin: '3rem 0',
+                      lineHeight: '1.8',
+                    }}
+                  >
+                    روی گوشیت حساب باز کن!
+                    <br />
+                    از احراز هویت آنلاین و افتتاح سپرده آنی گرفته تا صندوق
+                    سرمایه‌گذاری و ثبت‌نام وام ازدواج.
+                  </Text>
+                </Row>
+                <Row className={`${styles.home__resBtn} flex-container`}>
+                  <Col md={{ span: 6 }}>
                     <Button
                       href="#download-panel"
                       type="primary"
@@ -139,7 +151,7 @@ export function Index() {
                       دانلود اپلیکیشن
                     </Button>
                   </Col>
-                  <Col md={12}>
+                  <Col md={{ span: 6, offset: 2 }}>
                     <Button type="text" size="large" href="/faq">
                       چطور کار می‌کند؟
                       <LeftCircleOutlined style={{ marginTop: 5 }} />
@@ -162,7 +174,7 @@ export function Index() {
                 علاوه بر کارت‌های متنوع بانک گردشگری، رنگ کارت بانکی خودتون رو
                 نیز انتخاب کنید.
               </Text>
-              <Space>
+              <Space className={styles.home__sectionSix__color_cards}>
                 <img
                   src="/images/رنگ کارت های بانکی.png"
                   alt="pic"
@@ -219,11 +231,14 @@ export function Index() {
             <img src="/images/background.png" alt="pic" className="img-fluid" />
           </div>
 
-          <Row gutter={[32, 32]}>
+          <Row gutter={[0, 32]}>
             <Col
-              md={8}
-              sm={24}
-              style={{ display: 'flex', justifyContent: 'center' }}
+              md={{ span: 8 }}
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                width: '100%',
+              }}
             >
               <img
                 src="/images/newcustomer.png"
@@ -231,7 +246,7 @@ export function Index() {
                 alt=""
               />
             </Col>
-            <Col md={16}>
+            <Col md={{ span: 14, offset: 2 }}>
               <Row>
                 <Space direction="vertical" align="center">
                   <span className={styles.home__sectionFive__title}>
@@ -417,10 +432,9 @@ export function Index() {
                 <Col
                   lg={{ span: 6, offset: 2 }}
                   style={{
-                    display: 'flex',
-                    justifyContent: 'center',
                     paddingTop: '1rem',
                     width: '100%',
+                    height: '45px',
                   }}
                 >
                   <Row className={styles.getVersion} align="middle">

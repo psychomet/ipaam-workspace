@@ -13,14 +13,15 @@
 .getVersion {
   padding: 0.5rem 1rem;
   background: #fff;
-  height: 44px;
-  margin-top: 7rem;
+  height: auto;
+  margin-top: 7.3rem;
   border-radius: 8px;
   align-items: center;
   width: 100%;
   display: flex;
   justify-content: center;
 }
+
 .home {
   &__intro {
     @media (min-width: 1366px) {
@@ -111,6 +112,10 @@
     &__sectionThree__featureIcon {
       width: 33px;
       height: 33px;
+    }
+    &__resBtn {
+      justify-content: center;
+      text-align: center;
     }
   }
   &__sectionThree__featureTitle {
@@ -273,6 +278,15 @@
 @media (max-width: 1365px) {
   .home__sectionSix__qr_code {
     display: none;
+  }
+  .home__sectionSix__color_cards {
+    display: none;
+    visibility: hidden;
+  }
+  .getVersion {
+    margin-top: 0 !important;
+    height: 44px !important;
+    padding: 0 !important;
   }
 }
 //.container {
