@@ -1,5 +1,5 @@
 @import '~antd/dist/antd.less';
-
+@isMobile: 1365px;
 @font-family: IRANYekanFN, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
   'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
   'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -13,6 +13,12 @@
 @menu-item-group-title-font-size: 18px;
 .primary-color {
   color: @primary-color;
+}
+
+@media (max-width: @isMobile) {
+  .ant-layout {
+    background: #f8f9fa !important;
+  }
 }
 
 .loading-page {
