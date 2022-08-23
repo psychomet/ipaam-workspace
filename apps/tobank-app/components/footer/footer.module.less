@@ -1,3 +1,4 @@
+@isMobile: 1365px;
 .app__layout {
   &__footer {
     margin-top: 115px;
@@ -65,5 +66,14 @@
       text-align: center;
       justify-content: center;
     }
+  }
+}
+
+@media (max-width: @isMobile) {
+  .textSocialToBank {
+    text-align: center !important;
+  }
+  .textSocialGardesh {
+    text-align: left !important;
   }
 }
