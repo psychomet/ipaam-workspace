@@ -3,12 +3,43 @@
   width: 24px;
   margin-right: 12px;
 }
+.sectionCustomers {
+  @media (min-width: 1366px) {
+    padding: 58px 44px 58.7px 84px;
+  }
+  padding: 20px;
+  border-radius: 26px;
+  pos &__text {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 2.67;
+    color: #626262;
+  }
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(
+    to top,
+    #f6f6f6 40%,
+    rgba(239, 239, 239, 0) 2%,
+    rgba(239, 239, 239, 0) -80%
+  );
+  @media (max-width: @isMobile) {
+    background-color: #efefef !important;
+    font-size: 13px;
+    line-height: 2;
+  }
+}
 .download_icon_2 {
   width: 24px;
   margin-left: 12px;
 }
 .section_title {
+  text-align: center;
+  align-items: center;
   line-height: 1.75 !important;
+  @media (max-width: @isMobile) {
+    font-size: 20px !important;
+  }
 }
 .getVersion {
   padding: 0.5rem 1rem;
@@ -102,6 +133,9 @@
     font-style: normal;
     line-height: 1.1;
     letter-spacing: normal;
+    @media (max-width: @isMobile) {
+      font-size: 20px !important;
+    }
   }
 
   &__sectionThree__featureIcon {
@@ -116,6 +150,7 @@
     &__resBtn {
       justify-content: center;
       text-align: center;
+      margin-bottom: 1rem;
     }
   }
   &__sectionThree__featureTitle {
@@ -125,6 +160,9 @@
     font-style: normal;
     line-height: 1.1;
     letter-spacing: normal;
+    @media (max-width: @isMobile) {
+      font-size: 14px !important;
+    }
   }
   &__sectionFour__title {
     font-size: 28px;
@@ -133,6 +171,9 @@
     font-style: normal;
     line-height: 1.1;
     letter-spacing: normal;
+    @media (max-width: @isMobile) {
+      font-size: 20px !important;
+    }
   }
   &__sectionFour__text {
     font-size: 20px;
@@ -176,6 +217,9 @@
     font-style: normal;
     line-height: 1.1;
     letter-spacing: normal;
+    @media (max-width: @isMobile) {
+      font-size: 20px !important;
+    }
   }
 
   &__sectionFive__desc {
@@ -242,8 +286,11 @@
       padding: 40px;
       border-radius: 26px;
       background-color: #1ecad3;
-      margin-top: 17rem;
+      margin-top: 15rem;
       position: relative;
+      @media (max-width: @isMobile) {
+        margin-top: 5rem !important;
+      }
     }
     &__title {
       font-size: 28px;
@@ -252,6 +299,9 @@
       font-style: normal;
       line-height: 1.1;
       letter-spacing: normal;
+      @media (max-width: @isMobile) {
+        font-size: 20px !important;
+      }
     }
     &__desc {
       font-size: 18px;
@@ -260,6 +310,9 @@
       font-style: normal;
       line-height: 2;
       letter-spacing: normal;
+      @media (max-width: @isMobile) {
+        font-size: 14px !important;
+      }
     }
     &__list__title {
       font-size: 18px;
@@ -280,8 +333,12 @@
     display: none;
   }
   .home__sectionSix__color_cards {
-    display: none;
-    visibility: hidden;
+    text-align: center;
+    align-items: center;
+  }
+  .home__sectionFive__title {
+    align-items: center;
+    width: 100%;
   }
   .getVersion {
     margin-top: 0 !important;

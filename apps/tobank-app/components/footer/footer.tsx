@@ -32,7 +32,7 @@ export function Footer(props: FooterProps) {
                     src="/images/tobank-logo.svg"
                     alt=""
                     className="img-fluid"
-                    width={300}
+                    width={200}
                   />
                 </Col>
                 <Col xs={24} md={16}>
@@ -83,10 +83,7 @@ export function Footer(props: FooterProps) {
                 </span>
                 <Space direction="vertical" size={16}>
                   <Link href="/check-services/pichak-system">
-                    <a
-                      href="/check-services/pichak-system"
-                      className={styles.app__layout__footer__list_text}
-                    >
+                    <a className={styles.app__layout__footer__list_text}>
                       چک صیادی درتوبانک
                     </a>
                   </Link>
@@ -176,7 +173,12 @@ export function Footer(props: FooterProps) {
                 ما را در شبکه های اجتماعی دنبال کنید
               </span>
             </Col>
-            <Col style={{ textAlign: 'right' }} xs={12} md={{ span: 4 }}>
+            <Col
+              style={{ textAlign: 'right' }}
+              xs={12}
+              md={{ span: 4 }}
+              className={styles.textSocialGardesh}
+            >
               <a href="https://instagram.com/tourism.bank?igshid=YmMyMTA2M2Y=">
                 <Space>
                   <img src="/images/Button.svg" alt="" />
@@ -186,7 +188,12 @@ export function Footer(props: FooterProps) {
                 </Space>
               </a>
             </Col>
-            <Col style={{ textAlign: 'right' }} xs={12} md={{ span: 4 }}>
+            <Col
+              style={{ textAlign: 'right' }}
+              xs={12}
+              md={{ span: 4 }}
+              className={styles.textSocialToBank}
+            >
               <a href="https://www.instagram.com/tobank.ir/">
                 <Space>
                   <img src="/images/Button.svg" alt="" />

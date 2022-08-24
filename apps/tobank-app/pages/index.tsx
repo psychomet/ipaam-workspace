@@ -102,7 +102,7 @@ export function Index() {
   };
 
   return (
-    <Space className="w-100" direction="vertical" size={64}>
+    <Space className="w-100" direction="vertical" size={32}>
       <div className="container">
         <div className={styles.home__intro}>
           <Row gutter={[32, 43]}>
@@ -166,7 +166,11 @@ export function Index() {
       <div className="container" style={{ marginTop: 100 }}>
         <Row gutter={[32, 32]} align="middle" justify="space-between">
           <Col lg={8}>
-            <Space direction="vertical" size={32}>
+            <Space
+              direction="vertical"
+              size={32}
+              className={styles.home__sectionSix__color_cards}
+            >
               <span className={styles.home__sectionFour__title}>
                 انتخاب رنگ دلخواه شما
               </span>
@@ -174,7 +178,7 @@ export function Index() {
                 علاوه بر کارت‌های متنوع بانک گردشگری، رنگ کارت بانکی خودتون رو
                 نیز انتخاب کنید.
               </Text>
-              <Space className={styles.home__sectionSix__color_cards}>
+              <Space>
                 <img
                   src="/images/رنگ کارت های بانکی.png"
                   alt="pic"
@@ -197,7 +201,7 @@ export function Index() {
           <span className={styles.home__sectionThree__title}>خدمات توبانک</span>
           <Row gutter={[32, 32]}>
             {homeData.sectionThree.map((item, index) => (
-              <Col xs={24} sm={12} lg={6} key={index}>
+              <Col xs={12} sm={12} lg={6} key={index}>
                 <Space size={16}>
                   <img
                     src={item.image}
@@ -217,10 +221,7 @@ export function Index() {
         className={`container`}
         style={{ marginTop: 100, position: 'relative', overflow: ' hidden' }}
       >
-        <div
-          className={styles.home__intro}
-          style={{ overflow: 'hidden', position: 'relative' }}
-        >
+        <div className={`${styles.sectionCustomers}`}>
           <div
             style={{
               position: 'absolute',
@@ -248,25 +249,30 @@ export function Index() {
             </Col>
             <Col md={{ span: 14, offset: 2 }}>
               <Row>
-                <Space direction="vertical" align="center">
-                  <span className={styles.home__sectionFive__title}>
-                    باشگاه مشتریان
-                  </span>
+                <Space
+                  direction="vertical"
+                  align="start"
+                  size={32}
+                  className={styles.home__sectionFive__title}
+                >
+                  <span>باشگاه مشتریان توبانک</span>
+                  <Space direction="horizontal" align="center">
+                    <img
+                      src="/images/medal-star.png"
+                      className="img-fluid"
+                      alt=""
+                    />
+                    <span className={styles.home__sectionFive__subtitle}>
+                      نحوه دریافت امتیاز
+                    </span>
+                  </Space>
                 </Space>
               </Row>
-              <Row style={{ marginTop: 25 }}>
-                <Space direction="horizontal" align="center">
-                  <img
-                    src="/images/medal-star.png"
-                    className="img-fluid"
-                    alt=""
-                  />
-                  <span className={styles.home__sectionFive__subtitle}>
-                    نحوه دریافت امتیاز
-                  </span>
-                </Space>
-              </Row>
-              <Row gutter={[32, 32]} style={{ marginTop: 50 }}>
+
+              <Row
+                gutter={[32, 32]}
+                style={{ marginTop: 50, marginBottom: 16 }}
+              >
                 {homeData.sectionFive.map((item, index) => (
                   <Col className="gutter-row" xs={24} sm={12}>
                     <div className={styles.home__sectionFive__featureBox}>
@@ -325,7 +331,7 @@ export function Index() {
                   شعبه شخصی
                   <span className="primary-color"> توبانک</span>
                 </Title>
-                <Row gutter={[32, 40]}>
+                <Row gutter={[32, 8]}>
                   {homeData.secondSection.features.map((feature, index) => (
                     <Col key={index} lg={12}>
                       <Space direction="vertical" size={12}>
