@@ -188,11 +188,7 @@ export function Index() {
             </Space>
           </Col>
           <Col>
-            <img
-              src="/images/کارت های بانکی.png"
-              className="img-fluid"
-              alt=""
-            />
+            <img src="/images/Group 10421.png" className="img-fluid" alt="" />
           </Col>
         </Row>
       </div>
