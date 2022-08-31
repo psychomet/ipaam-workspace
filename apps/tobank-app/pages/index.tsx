@@ -307,7 +307,7 @@ export function Index() {
             </Space>
           </Col>
           <Col lg={8} xs={{ order: 1 }}>
-            <img src="/images/Group%2010366.png" className="img-fluid" alt="" />
+            <img src="/images/code-davat.svg" className="img-fluid" alt="" />
           </Col>
         </Row>
       </div>
