@@ -19,11 +19,16 @@ export function Index() {
    * Note: The corresponding styles are in the ./index.less file.
    */
   const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isModalNewVisible, setIsModalNewVisible] = useState(false);
 
   const [androidAddress, setAndroidAddress] = useState<{
     regular: string;
     armeab: string;
   }>();
+
+  const handleNewCancel = () => {
+    setIsModalNewVisible(false);
+  };
 
   const isDesktop = useMediaQuery('(min-width: 1366px)');
 
@@ -58,6 +63,7 @@ export function Index() {
   };
 
   useEffect(() => {
+    setIsModalNewVisible(true);
     fetch(
       `https://appapi.gardeshpay.ir/api/v1.0/config/apps/version/last?type=and&time=${new Date().getTime()}`,
       {
@@ -103,6 +109,61 @@ export function Index() {
 
   return (
     <Space className="w-100" direction="vertical" size={32}>
+      <Modal
+        title={[
+          <Text>
+            جشنواره قرعه کشی حساب های قرض الحسنه بانک گردشگری
+            <strong>
+              <Text type="danger">(مهرورزان)</Text>
+            </strong>
+          </Text>,
+        ]}
+        visible={isModalNewVisible}
+        footer={[
+          <Row gutter={16}>
+            <Col span={24}>
+              <Button block onClick={handleNewCancel}>
+                متوجه شدم
+              </Button>
+            </Col>
+          </Row>,
+        ]}
+      >
+        <ul>
+          <li>
+            دوره محاسبه امتیازات برای شرکت در قرعه کشی و اعطای جوایز از اول
+            مرداد ماه تا 25 مهر ماه 1401 و روز قرعه‌کشی 30 مهر ماه می‏باشد.
+          </li>
+          <li>
+            حداقل موجودی حساب‏های قرض‏الحسنه جهت شرکت در قرعه کشی مبلغ
+            000‏/000‏/1 ریال می‏باشد.
+          </li>
+          <li>
+            هر 000‏/000‏/1 ریال مانده موجودی روزانه در سپرده‏های قرض الحسنه،
+            برابر 1 شانس قرعه کشی می‏باشد.
+          </li>
+          <li>
+            ‏ امکان افتتاح حساب هم به صورت حضوری از طریق شعب بانک و هم به صورت
+            غیر حضوری توسط اپلیکیشن ToBank و بدون هزینه صدور و ارسال کارت درب
+            منزل برای مشتری فراهم می‏باشد.
+          </li>
+          <li>
+            جوایز در نظر گرفته شده برای قرعه کشی:
+            <ul>
+              <li>یک سکه تمام بهار آزادی برای 10 نفر</li>
+              <li> یک نیم سکه بهار آزادی برای 20 نفر</li>
+              <li>یک ربع سکه بهار آزادی برای 40 نفر</li>
+              <li> 200 جایزه نقدی 20 میلیون ریالی</li>
+              <li> 20 کمک هزینه 50 میلیون ریالی جهت سفر به عتبات عالیات</li>
+              <li>
+                {' '}
+                50 کمک هزینه 100 میلیون ریالی جهت خرید کالای بادوام داخلی و
+                هزاران جوایز نقدی و غیر نقدی دیگر
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </Modal>
       <div className="container">
         <div className={styles.home__intro}>
           <Row gutter={[32, 43]}>
