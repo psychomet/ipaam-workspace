@@ -27,6 +27,7 @@ export function Index() {
   }>();
 
   const handleNewCancel = () => {
+    localStorage.setItem('modalVisible', JSON.stringify(false));
     setIsModalNewVisible(false);
   };
 
@@ -63,7 +64,10 @@ export function Index() {
   };
 
   useEffect(() => {
-    setIsModalNewVisible(true);
+    const modalVisible = localStorage.getItem('modalVisible');
+    if (!modalVisible) {
+      setIsModalNewVisible(true);
+    }
     fetch(
       `https://appapi.gardeshpay.ir/api/v1.0/config/apps/version/last?type=and&time=${new Date().getTime()}`,
       {
@@ -110,6 +114,7 @@ export function Index() {
   return (
     <Space className="w-100" direction="vertical" size={32}>
       <Modal
+        onCancel={handleNewCancel}
         title={[
           <Text>
             جشنواره قرعه کشی حساب های قرض الحسنه بانک گردشگری
