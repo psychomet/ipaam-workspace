@@ -37,7 +37,7 @@ export function Footer(props: FooterProps) {
                 </Col>
                 <Col xs={24} md={16}>
                   <span className={styles.app__layout__footer__intro_text}>
-                    توبانک، یک شعبه مجازی همراه شماست!
+                    TOBANK، یک شعبه مجازی همراه شماست!
                   </span>
                 </Col>
               </Row>
@@ -84,7 +84,7 @@ export function Footer(props: FooterProps) {
                 <Space direction="vertical" size={16}>
                   <Link href="/check-services/pichak-system">
                     <a className={styles.app__layout__footer__list_text}>
-                      چک صیادی درتوبانک
+                      چک صیادی درTOBANK
                     </a>
                   </Link>
                   <a
@@ -198,7 +198,7 @@ export function Footer(props: FooterProps) {
                 <Space>
                   <img src="/images/Button.svg" alt="" />
                   <span className={styles.app__layout__footer__list_text}>
-                    توبانک
+                    TOBANK
                   </span>
                 </Space>
               </a>

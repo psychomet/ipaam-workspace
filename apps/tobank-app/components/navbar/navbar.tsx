@@ -201,7 +201,7 @@ export function Navbar({ menu }) {
                 size="middle"
                 style={{ width: '100%', height: '100%' }}
               >
-                دانلود توبانک
+                دانلود TOBANK
               </Button>
             </a>
           </div>
@@ -266,7 +266,7 @@ export function Navbar({ menu }) {
               size="middle"
               style={{ width: '100%', height: '100%' }}
             >
-              دانلود توبانک
+              دانلود TOBANK
             </Button>
           </a>
         </div>

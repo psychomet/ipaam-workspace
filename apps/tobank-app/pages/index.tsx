@@ -187,7 +187,7 @@ export function Index() {
                     level={!isDesktop ? 3 : 1}
                     style={{ fontSize: '30px', fontWeight: 'bolder' }}
                   >
-                    <span className="primary-color">توبانک،</span> یک شعبه مجازی
+                    <span className="primary-color">TOBANK،</span> یک شعبه مجازی
                     همراه شماست!
                   </Title>
                 </Row>
@@ -260,7 +260,7 @@ export function Index() {
       </div>
       <div className="container" style={{ zIndex: 500, marginTop: 100 }}>
         <Space direction="vertical" size={56} align="center">
-          <span className={styles.home__sectionThree__title}>خدمات توبانک</span>
+          <span className={styles.home__sectionThree__title}>خدمات TOBANK</span>
           <Row gutter={[32, 32]}>
             {homeData.sectionThree.map((item, index) => (
               <Col xs={12} sm={12} lg={6} key={index}>
@@ -317,7 +317,7 @@ export function Index() {
                   size={32}
                   className={styles.home__sectionFive__title}
                 >
-                  <span>باشگاه مشتریان توبانک</span>
+                  <span>باشگاه مشتریان TOBANK</span>
                   <Space direction="horizontal" align="center">
                     <img
                       src="/images/medal-star.png"
@@ -365,7 +365,7 @@ export function Index() {
               </span>
               <p className={styles.home__sectionSix__desc}>
                 با دعوت و معرفی دوستان خود به افتتاح اولین سپرده در سامانه شعبه
-                شخصی توبانک، به میزان 500/000 ریال پاداش دریافت کنید. افرادی که
+                شخصی TOBANK، به میزان 500/000 ریال پاداش دریافت کنید. افرادی که
                 دعوت می‌شوند و اولین سپرده خود را افتتاح می‌کنند، به میزان 10%
                 از مانده ریالی تا پایان روز، تا سقف 2/000/000 ریال هدیه دریافت
                 خواهند کرد.
@@ -391,7 +391,7 @@ export function Index() {
               <Space direction="vertical" size={32}>
                 <Title level={2} className={styles.section_title}>
                   شعبه شخصی
-                  <span className="primary-color"> توبانک</span>
+                  <span className="primary-color"> TOBANK</span>
                 </Title>
                 <Row gutter={[32, 8]}>
                   {homeData.secondSection.features.map((feature, index) => (
@@ -539,7 +539,7 @@ export function Index() {
           <Row gutter={16}>
             <Col span={12}>
               <Button href={androidAddress?.armeab} block>
-                دانلود توبانک
+                دانلود TOBANK
               </Button>
             </Col>
             <Col span={12}>
@@ -556,7 +556,7 @@ export function Index() {
             <strong>
               در صورت دریافت پیام "app not installed"،
               <br />
-              توبانک{' '}
+              TOBANK{' '}
               <a href={androidAddress?.armeab}>
                 (نسخهarmeabi-v7a) را دانلود
               </a>{' '}

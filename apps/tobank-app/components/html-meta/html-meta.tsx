@@ -8,7 +8,7 @@ export interface HtmlMetaProps {
 }
 
 export function HtmlMeta(props: HtmlMetaProps) {
-  const siteName = props.disableSiteName ? '' : ` توبانک | ToBank`;
+  const siteName = props.disableSiteName ? '' : ` TOBANK | ToBank`;
 
   return (
     <Helmet>
