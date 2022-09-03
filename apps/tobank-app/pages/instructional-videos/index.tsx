@@ -56,13 +56,13 @@ const CheckGuide: React.FC<IProps> = (props) => {
           </div>
           <div className={styles.video_desc_section}>
             <Space direction="vertical" size={16}>
-              <Title level={4}>توبانک</Title>
+              <Title level={4}>TOBANK</Title>
               <Text>
                 در دنیای امروز که امور مالی از دغدغه‌های مهم اشخاص شده است، پاسخ
                 به این سوال که افراد موفق در این زمینه چگونه عمل کرده‌اند
                 می‌تواند کلید اصلی گشودن گره از این معما را به‌دست دهد. آیا کار
                 زیاد یا شتاب در اقدام منجر به موفقیت می‌شود؟ در این ویدیو با
-                راه‌کاری به‌نام توبانک آشنا خواهید شد.
+                راه‌کاری به‌نام TOBANK آشنا خواهید شد.
               </Text>
             </Space>
           </div>
@@ -96,11 +96,11 @@ const CheckGuide: React.FC<IProps> = (props) => {
           <div className={styles.video_desc_section}>
             <Space direction="vertical" size={16}>
               <Title level={4}>
-                تراست کردن اپلیکیشن توبانک در گوشی های آیفون iOS
+                تراست کردن اپلیکیشن TOBANK در گوشی های آیفون iOS
               </Title>
               <Text>
                 دارندگان تلفن‌های هوشمند اپل برای نصب، می‌بایست اپلیکیشن را به
-                اصطلاح تراست کنند. در این ویدیو نحوه تراست کردن اپلیکیشن توبانک
+                اصطلاح تراست کنند. در این ویدیو نحوه تراست کردن اپلیکیشن TOBANK
                 را مشاهده می‌کنید.
               </Text>
             </Space>
@@ -148,7 +148,7 @@ const CheckGuide: React.FC<IProps> = (props) => {
               </Col>
             </Row>
           </Card>
-          <Card title="توبانک">
+          <Card title="TOBANK">
             <Row justify="space-between" align="middle" gutter={[16, 16]}>
               <Col lg={8}>
                 <Space direction="vertical" size={16}>
@@ -157,7 +157,7 @@ const CheckGuide: React.FC<IProps> = (props) => {
                     پاسخ به این سوال که افراد موفق در این زمینه چگونه عمل
                     کرده‌اند می‌تواند کلید اصلی گشودن گره از این معما را به‌دست
                     دهد. آیا کار زیاد یا شتاب در اقدام منجر به موفقیت می‌شود؟ در
-                    این ویدیو با راه‌کاری به‌نام توبانک آشنا خواهید شد.
+                    این ویدیو با راه‌کاری به‌نام TOBANK آشنا خواهید شد.
                   </Text>
                 </Space>
               </Col>
@@ -187,7 +187,7 @@ const CheckGuide: React.FC<IProps> = (props) => {
               </Col>
             </Row>
           </Card>
-          <Card title="تراست کردن اپلیکیشن توبانک در گوشی های آیفون">
+          <Card title="تراست کردن اپلیکیشن TOBANK در گوشی های آیفون">
             <Row justify="space-between" align="middle" gutter={[16, 16]}>
               <Col lg={8}>
                 <Space direction="vertical" size={16}>
@@ -195,7 +195,7 @@ const CheckGuide: React.FC<IProps> = (props) => {
                   <Text>
                     دارندگان تلفن‌های هوشمند اپل برای نصب، می‌بایست اپلیکیشن را
                     به اصطلاح تراست کنند. در این ویدیو نحوه تراست کردن اپلیکیشن
-                    توبانک را مشاهده می‌کنید.
+                    TOBANK را مشاهده می‌کنید.
                   </Text>
                 </Space>
               </Col>
