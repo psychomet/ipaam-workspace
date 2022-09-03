@@ -120,7 +120,7 @@ export function Index() {
           <Text>
             جشنواره قرعه کشی حساب های قرض الحسنه بانک گردشگری
             <strong>
-              <Text type="danger">(مهرورزان)</Text>
+              <Text type="danger">(مهرریزان)</Text>
             </strong>
           </Text>,
         ]}
