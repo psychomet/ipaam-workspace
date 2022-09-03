@@ -49,7 +49,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
       <HelmetProvider>
         {/*<Head>*/}
         {/*  */}
-        {/*  <title>توبانک | ToBank</title>*/}
+        {/*  <title>TOBANK | ToBank</title>*/}
         {/*  <link rel="shortcut icon" href="/favicon.ico" />*/}
         {/*</Head>*/}
         <HtmlMeta title={pageProps?.name} />

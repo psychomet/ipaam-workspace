@@ -101,7 +101,7 @@ const ContactUs: React.FC<IProps> = (props) => {
                       alt=""
                     />
                     <span className={styles.contactus__social_media__text}>
-                      توبانک
+                      TOBANK
                     </span>
                   </a>
                 </Space>
@@ -132,8 +132,8 @@ const ContactUs: React.FC<IProps> = (props) => {
                   </span>
 
                   <p className={styles.contactus__banner__text}>
-                    توبانک یک بانک کاملا آنلاین و به‌صورت شبانه روزی است. شما
-                    می‌توانید علاوه بر شماره تماس، از طریق اپلیکیشن توبانک و
+                    TOBANK یک بانک کاملا آنلاین و به‌صورت شبانه روزی است. شما
+                    می‌توانید علاوه بر شماره تماس، از طریق اپلیکیشن TOBANK و
                     انتخاب گزینه هدفون، سوالات و مشکلات خود را با ما در میان
                     بگذارید.
                   </p>
