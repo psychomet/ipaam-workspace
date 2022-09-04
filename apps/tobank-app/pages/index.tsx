@@ -81,6 +81,7 @@ export function Index() {
       .then(
         (result) => {
           const res = JSON.parse(downupToCode(result.data));
+          console.log('res', res);
           // this.androidAddress = ;
           setAndroidAddress({
             regular: res?.data?.link,
