@@ -115,6 +115,7 @@ export function Index() {
   return (
     <Space className="w-100" direction="vertical" size={32}>
       <Modal
+        width={1000}
         onCancel={handleNewCancel}
         title={[
           <Text>
@@ -140,7 +141,8 @@ export function Index() {
           </Row>,
         ]}
       >
-        <ul style={{ paddingRight: '1.5rem' }}>
+        <img src="/images/بنر-توبانک.jpg" className="img-fluid" alt="" />
+        {/* <ul style={{ paddingRight: '1.5rem' }}>
           <li>
             دوره محاسبه امتیازات برای شرکت در قرعه کشی و اعطای جوایز از اول
             مرداد ماه تا 25 مهر ماه 1401 و روز قرعه‌کشی 30 مهر ماه می‏ باشد.{' '}
@@ -173,7 +175,7 @@ export function Index() {
               </li>
             </ul>
           </li>
-        </ul>
+        </ul> */}
       </Modal>
       <div className="container">
         <div className={styles.home__intro}>
