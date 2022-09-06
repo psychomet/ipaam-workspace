@@ -11,6 +11,7 @@ import { LoadingOutlined } from '@ant-design/icons';
 import { Layout } from 'antd';
 import { Footer, HtmlMeta, Navbar, Sidebar, TopicMenu } from '../components';
 import { HelmetProvider } from 'react-helmet-async';
+import { AppLayout } from '../layouts';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   const topics = ['First topic', 'Second topic', 'Third topic'];
@@ -62,7 +63,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
                   indicator={<LoadingOutlined style={{ fontSize: 45 }} />}
                 />
               </div>
-            ) : (
+            ) : !pageProps.layout ? (
               <>
                 <Navbar menu={Menu} />
                 <Layout>
@@ -72,6 +73,12 @@ function CustomApp({ Component, pageProps }: AppProps) {
                   </Layout.Content>
                   <Footer />
                 </Layout>
+              </>
+            ) : (
+              <>
+                <AppLayout>
+                  <Component {...pageProps} />
+                </AppLayout>
               </>
             )}
           </ConfigProvider>

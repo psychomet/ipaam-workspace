@@ -433,7 +433,6 @@ export default CheckTransfer;
 export const getStaticProps = async () => {
   return {
     props: {
-      layout: 'master',
       name: items[1].children[1].label,
       // name: menuData[1].subMenu[1].title,
     },
