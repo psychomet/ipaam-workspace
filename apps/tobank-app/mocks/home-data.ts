@@ -104,6 +104,7 @@ export const homeData = {
       {
         image: '/images/Group 10377.svg',
         link: 'https://sibapp.com/applications/download/a2717ef7-37ad-4bab-abcc-ea459d227596',
+        icon: true,
       },
     ],
     androidLinks: [

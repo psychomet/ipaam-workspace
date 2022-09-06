@@ -6,7 +6,7 @@ import {
   LeftCircleOutlined,
   InfoCircleFilled,
 } from '@ant-design/icons';
-import { Button, Col, Modal, Row, Space, Typography } from 'antd';
+import { Button, Col, Modal, Row, Space, Typography, Badge } from 'antd';
 const { Title, Text } = Typography;
 import cx from 'classnames';
 import { homeData } from '../mocks/home-data';
@@ -458,11 +458,21 @@ export function Index() {
                       {homeData.sectionSix.iosLinks.map((item, index) => (
                         <Col className="mb-4" key={index} span={12}>
                           <a target="_blank" href={item.link}>
-                            <img
-                              src={item.image}
-                              className="img-fluid w-100"
-                              alt=""
-                            />
+                            {item.icon ? (
+                              <Badge.Ribbon text="FREE">
+                                <img
+                                  src={item.image}
+                                  className="img-fluid w-100"
+                                  alt=""
+                                />
+                              </Badge.Ribbon>
+                            ) : (
+                              <img
+                                src={item.image}
+                                className="img-fluid w-100"
+                                alt=""
+                              />
+                            )}
                           </a>
                         </Col>
                       ))}
