@@ -92,7 +92,6 @@ export default PichakSystem;
 export const getStaticProps = async () => {
   return {
     props: {
-      layout: 'master',
       name: items[1].children[0].label,
     },
   };

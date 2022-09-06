@@ -126,8 +126,6 @@ export default AboutUs;
 
 export const getStaticProps = async () => {
   return {
-    props: {
-      layout: 'master',
-    },
+    props: {},
   };
 };

@@ -480,7 +480,6 @@ export default CheckGuide;
 export const getStaticProps = async () => {
   return {
     props: {
-      layout: 'master',
       name: 'قوانین چک های تایید شده',
     },
   };

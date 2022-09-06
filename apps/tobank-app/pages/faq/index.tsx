@@ -75,7 +75,6 @@ export default FAQ;
 export const getStaticProps = async () => {
   return {
     props: {
-      layout: 'master',
       name: items[2].children[1].label,
     },
   };

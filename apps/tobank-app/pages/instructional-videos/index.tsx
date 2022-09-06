@@ -216,7 +216,6 @@ export default CheckGuide;
 export const getStaticProps = async () => {
   return {
     props: {
-      layout: 'master',
       name: items[2].children[0].label,
     },
   };

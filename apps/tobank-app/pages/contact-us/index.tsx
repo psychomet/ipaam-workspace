@@ -151,7 +151,6 @@ export default ContactUs;
 export const getStaticProps = async () => {
   return {
     props: {
-      layout: 'master',
       name: 'تماس با ما',
     },
   };

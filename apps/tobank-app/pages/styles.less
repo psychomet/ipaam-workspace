@@ -12,6 +12,12 @@
 @menu-item-font-size: 18px;
 @dropdown-font-size: 18px;
 @menu-item-group-title-font-size: 18px;
+:root{
+  --bs-body-font-family: IRANYekanFN;
+}
+body{
+  font-family: IRANYekanFN !important;
+}
 .primary-color {
   color: @primary-color;
 }
@@ -21,6 +27,11 @@
     background: #f8f9fa !important;
   }
 }
+
+//:global(body){
+//
+//}
+
 
 .loading-page {
   position: absolute;
@@ -88,4 +99,11 @@
 .ant-menu-inline.ant-menu-root .ant-menu-item > *,
 .ant-menu-inline.ant-menu-root .ant-menu-submenu-title > * {
   font-size: 1rem !important;
+}
+.box {
+  border-radius: 4px;
+  background: #f1f1f1;
+  padding: 5px;
+  font-size: 12px;
+  //padding-left: 15px;
 }
