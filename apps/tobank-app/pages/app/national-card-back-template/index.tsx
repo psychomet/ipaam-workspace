@@ -3,9 +3,11 @@ import { items } from '../../../mocks/menu-data';
 import { Space } from 'antd';
 
 /* eslint-disable-next-line */
-export interface Ehraz11Props {}
+export interface NationalCardFrontTemplateProps {}
 
-export function Ehraz11(props: Ehraz11Props) {
+export function NationalCardFrontTemplate(
+  props: NationalCardFrontTemplateProps
+) {
   return (
     <>
       <Space direction={'vertical'} size={32} className="pb-3">
@@ -90,7 +92,7 @@ export function Ehraz11(props: Ehraz11Props) {
   );
 }
 
-export default Ehraz11;
+export default NationalCardFrontTemplate;
 
 export const getStaticProps = async () => {
   return {

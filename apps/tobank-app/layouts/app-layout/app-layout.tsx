@@ -29,7 +29,7 @@ export function AppLayout({ children }) {
   return (
     <>
       <div
-        className={`container ${
+        className={`app-layout container ${
           theme === 'light' ? styles['is-light'] : styles['is-dark']
         }`}
         style={{
