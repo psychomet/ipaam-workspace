@@ -3,11 +3,9 @@ import { items } from '../../../mocks/menu-data';
 import { Space } from 'antd';
 
 /* eslint-disable-next-line */
-export interface BirthCertificateMainTemplateProps {}
+export interface PersonalVideoTemplateProps {}
 
-export function BirthCertificateMainTemplate(
-  props: BirthCertificateMainTemplateProps
-) {
+export function PersonalVideoTemplate(props: PersonalVideoTemplateProps) {
   return (
     <>
       <Space direction={'vertical'} size={32} className="pb-3">
@@ -20,14 +18,22 @@ export function BirthCertificateMainTemplate(
               </Space>
             </div>
           </Space>
-          <img src="/app/pic.png" className="img-fluid" alt="" />
+          <div className="box text-center">
+            <video
+              autoPlay={true}
+              loop={true}
+              type={'video/mp4'}
+              src="/app/20220704_131406.mp4"
+              className="img-fluid rounded"
+            ></video>
+          </div>
         </Space>
       </Space>
     </>
   );
 }
 
-export default BirthCertificateMainTemplate;
+export default PersonalVideoTemplate;
 
 export const getStaticProps = async () => {
   return {
