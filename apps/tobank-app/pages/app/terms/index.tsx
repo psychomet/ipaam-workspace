@@ -7,9 +7,16 @@ export interface TermsProps {
 }
 
 export function Terms(props: TermsProps) {
-  const [html, setHtml] = useState<string>(
-    props.html['data'].data.html_content
-  );
+  const [html, setHtml] = useState<string>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch(`https://appapi.gardeshpay.ir/api/v1.0/page/tos`);
+      const data = await res.json();
+      setHtml(JSON.parse(downupToCode(data.data))['data'].data.html_content);
+    };
+    fetchData();
+  }, []);
 
   return (
     <>
@@ -20,21 +27,10 @@ export function Terms(props: TermsProps) {
 
 export default Terms;
 
-// export const getStaticProps = async () => {
-//   return {
-//     props: {
-//       layout: 'app',
-//     },
-//   };
-// };
-
-export async function getServerSideProps(context) {
-  const res = await fetch(`https://appapi.gardeshpay.ir/api/v1.0/page/tos`);
-  const data = await res.json();
+export const getStaticProps = async () => {
   return {
     props: {
       layout: 'app',
-      html: JSON.parse(downupToCode(data.data)),
-    }, // will be passed to the page component as props
+    },
   };
-}
+};
