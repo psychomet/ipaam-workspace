@@ -22,7 +22,6 @@ export function PersonalVideoTemplate(props: PersonalVideoTemplateProps) {
             <video
               autoPlay={true}
               loop={true}
-              type={'video/mp4'}
               src="/app/20220704_131406.mp4"
               className="img-fluid rounded"
             ></video>
