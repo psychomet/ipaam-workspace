@@ -1,15 +1,12 @@
-import styles from './index.module.less';
-import { items } from '../../../mocks/menu-data';
-import { Space } from 'antd';
 import { useEffect, useState } from 'react';
 import { downupToCode } from '../../../utils';
 
 /* eslint-disable-next-line */
-export interface ContactUsProps {
+export interface TermsProps {
   html: string;
 }
 
-export function ContactUs(props: ContactUsProps) {
+export function Terms(props: TermsProps) {
   const [html, setHtml] = useState<string>(
     props.html['data'].data.html_content
   );
@@ -21,7 +18,7 @@ export function ContactUs(props: ContactUsProps) {
   );
 }
 
-export default ContactUs;
+export default Terms;
 
 // export const getStaticProps = async () => {
 //   return {
@@ -32,7 +29,7 @@ export default ContactUs;
 // };
 
 export async function getServerSideProps(context) {
-  const res = await fetch(`https://appapi.gardeshpay.ir/api/v1.0/page/contact`);
+  const res = await fetch(`https://appapi.gardeshpay.ir/api/v1.0/page/tos`);
   const data = await res.json();
   return {
     props: {

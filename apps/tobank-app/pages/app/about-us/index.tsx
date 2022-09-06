@@ -5,11 +5,11 @@ import { useEffect, useState } from 'react';
 import { downupToCode } from '../../../utils';
 
 /* eslint-disable-next-line */
-export interface ContactUsProps {
+export interface AboutUsProps {
   html: string;
 }
 
-export function ContactUs(props: ContactUsProps) {
+export function AboutUs(props: AboutUsProps) {
   const [html, setHtml] = useState<string>(
     props.html['data'].data.html_content
   );
@@ -21,7 +21,7 @@ export function ContactUs(props: ContactUsProps) {
   );
 }
 
-export default ContactUs;
+export default AboutUs;
 
 // export const getStaticProps = async () => {
 //   return {
@@ -32,7 +32,7 @@ export default ContactUs;
 // };
 
 export async function getServerSideProps(context) {
-  const res = await fetch(`https://appapi.gardeshpay.ir/api/v1.0/page/contact`);
+  const res = await fetch(`https://appapi.gardeshpay.ir/api/v1.0/page/about`);
   const data = await res.json();
   return {
     props: {
