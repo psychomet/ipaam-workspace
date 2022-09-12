@@ -139,7 +139,7 @@ export function Footer(props: FooterProps) {
                 <span className={styles.app__layout__footer__list_title}>
                   مجوز‌‌های ما
                 </span>
-                <Space direction="vertical" size={16}>
+                <Space direction="horizontal" size={16}>
                   <img
                     referrerPolicy={'origin'}
                     id="rgvjjxlznbqefukzjxlzjxlz"
@@ -154,6 +154,14 @@ export function Footer(props: FooterProps) {
                     alt="logo-samandehi"
                     src="https://logo.samandehi.ir/logo.aspx?id=312611&p=qftinbpdodrfwlbqnbpdnbpd"
                   />
+                  <a
+                    href={
+                      'https://logo.saramad.ir/verify.aspx?CodeShamad=1-2-694072-63-0-2'
+                    }
+                    className={styles.app__layout__footer__intro_small_text}
+                  >
+                    <img src="/assets/saramad-logo.svg" alt="" />
+                  </a>
                   {/*<img src="/images/Group%2010387.svg" width={93} alt="" />*/}
                 </Space>
               </Space>
@@ -216,6 +224,17 @@ export function Footer(props: FooterProps) {
                   <img src="/images/لوگوی%20گردش%20پی@2x.svg" alt="" />
                 </Space>
               </a>
+              {/* <a
+                href={
+                  'https://logo.saramad.ir/verify.aspx?CodeShamad=1-2-694072-63-0-2'
+                }
+                className={styles.app__layout__footer__intro_small_text}
+              >
+                <Space>
+                  <small>مجوز نشر</small>
+                  <img src="/assets/saramad-logo.svg" alt="" />
+                </Space>
+              </a> */}
             </Col>
           </Row>
         </Space>
