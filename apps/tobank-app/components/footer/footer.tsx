@@ -204,12 +204,31 @@ export function Footer(props: FooterProps) {
               </a>
             </Col>
             <Col md={{ span: 8 }}>
-              <span className={styles.app__layout__footer__intro_small_text}>
-                کلیه حقوق این وب‌سایت متعلق به بانک گردشگری است.
-              </span>
+              {/*<span className={styles.app__layout__footer__intro_small_text}>*/}
+              {/*  کلیه حقوق این وب‌سایت متعلق به بانک گردشگری است.*/}
+              {/*</span> */}
+              <a
+                href={'https://gardeshpay.ir'}
+                className={styles.app__layout__footer__intro_small_text}
+              >
+                <Space>
+                  <small>قدرت گرفته از</small>
+                  <img src="/images/لوگوی%20گردش%20پی@2x.svg" alt="" />
+                </Space>
+              </a>
             </Col>
           </Row>
         </Space>
+        <Row
+          gutter={[12, 12]}
+          align="middle"
+          justify={'center'}
+          className={cx('py-3', styles.app__layout__powered)}
+        >
+          <Col>
+            <small>کلیه حقوق این وب‌سایت متعلق به بانک گردشگری است.</small>
+          </Col>
+        </Row>
       </div>
     </footer>
   );
