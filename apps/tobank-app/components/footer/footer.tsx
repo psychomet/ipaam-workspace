@@ -143,7 +143,7 @@ export function Footer(props: FooterProps) {
                   <img
                     referrerPolicy={'origin'}
                     id="rgvjjxlznbqefukzjxlzjxlz"
-                    style={{ cursor: 'pointer' }}
+                    style={{ cursor: 'pointer', height: '100px' }}
                     onClick={() =>
                       window.open(
                         'https://logo.samandehi.ir/Verify.aspx?id=312611&p=xlaorfthuiwkgvkarfthrfth',
@@ -160,7 +160,11 @@ export function Footer(props: FooterProps) {
                     }
                     className={styles.app__layout__footer__intro_small_text}
                   >
-                    <img src="/assets/saramad-logo.svg" alt="" />
+                    <img
+                      src="/assets/saramad-logo.svg"
+                      style={{ height: '100px' }}
+                      alt=""
+                    />
                   </a>
                   {/*<img src="/images/Group%2010387.svg" width={93} alt="" />*/}
                 </Space>
