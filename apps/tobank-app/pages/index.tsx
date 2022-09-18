@@ -27,7 +27,7 @@ export function Index() {
   }>();
 
   const handleNewCancel = () => {
-    localStorage.setItem('modalVisible', JSON.stringify(false));
+    localStorage.setItem('POPUP-REF', JSON.stringify(false));
     setIsModalNewVisible(false);
   };
 
@@ -64,8 +64,8 @@ export function Index() {
   };
 
   useEffect(() => {
-    const modalVisible = localStorage.getItem('modalVisible');
-    if (!modalVisible) {
+    const modalRef = localStorage.getItem('POPUP-REF');
+    if (!modalRef) {
       setIsModalNewVisible(true);
     }
     fetch(
@@ -141,7 +141,7 @@ export function Index() {
           </Row>,
         ]}
       >
-        <img src="/images/بنر-توبانک.jpg" className="img-fluid" alt="" />
+        <img src="/images/popup-ref.jpg" className="img-fluid" alt="" />
         {/* <ul style={{ paddingRight: '1.5rem' }}>
           <li>
             دوره محاسبه امتیازات برای شرکت در قرعه کشی و اعطای جوایز از اول
