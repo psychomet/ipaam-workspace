@@ -117,14 +117,6 @@ export function Index() {
       <Modal
         width={1000}
         onCancel={handleNewCancel}
-        title={[
-          <Text>
-            جشنواره قرعه کشی حساب های قرض الحسنه بانک گردشگری
-            <strong>
-              <Text type="danger">(مهرریزان)</Text>
-            </strong>
-          </Text>,
-        ]}
         visible={isModalNewVisible}
         footer={[
           <Row gutter={16}>
