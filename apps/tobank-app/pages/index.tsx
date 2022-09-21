@@ -19,17 +19,17 @@ export function Index() {
    * Note: The corresponding styles are in the ./index.less file.
    */
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const [isModalNewVisible, setIsModalNewVisible] = useState(false);
+  // const [isModalNewVisible, setIsModalNewVisible] = useState(false);
 
   const [androidAddress, setAndroidAddress] = useState<{
     regular: string;
     armeab: string;
   }>();
 
-  const handleNewCancel = () => {
-    localStorage.setItem('POPUP-REF', JSON.stringify(false));
-    setIsModalNewVisible(false);
-  };
+  // const handleNewCancel = () => {
+  //   localStorage.setItem('POPUP-REF', JSON.stringify(false));
+  //   setIsModalNewVisible(false);
+  // };
 
   const isDesktop = useMediaQuery('(min-width: 1366px)');
 
@@ -64,10 +64,10 @@ export function Index() {
   };
 
   useEffect(() => {
-    const modalRef = localStorage.getItem('POPUP-REF');
-    if (!modalRef) {
-      setIsModalNewVisible(true);
-    }
+    // const modalRef = localStorage.getItem('POPUP-REF');
+    // if (!modalRef) {
+    //   setIsModalNewVisible(true);
+    // }
     fetch(
       `https://appapi.gardeshpay.ir/api/v1.0/config/apps/version/last?type=and&time=${new Date().getTime()}`,
       {
@@ -114,7 +114,7 @@ export function Index() {
 
   return (
     <Space className="w-100" direction="vertical" size={32}>
-      <Modal
+      {/* <Modal
         width={1000}
         onCancel={handleNewCancel}
         visible={isModalNewVisible}
@@ -134,7 +134,7 @@ export function Index() {
         ]}
       >
         <img src="/images/popup-ref.jpg" className="img-fluid" alt="" />
-      </Modal>
+      </Modal> */}
       <div className="container">
         <div className={styles.home__intro}>
           <Row gutter={[32, 43]}>
@@ -322,7 +322,7 @@ export function Index() {
           </Row>
         </div>
       </div>
-      <div className="container" style={{ marginTop: 100, marginBottom: 100 }}>
+      {/* <div className="container" style={{ marginTop: 100, marginBottom: 100 }}>
         <Row gutter={[32, 32]} align="middle" justify="space-between">
           <Col lg={13}>
             <Space direction="vertical" size={32}>
@@ -345,10 +345,10 @@ export function Index() {
                 <span style={{ fontWeight: 'bold' }}>
                   و تا سقف 200 هزار تومان به دعوت‌شونده{' '}
                 </span>
-                {/* <ul style={{ paddingRight: '1rem', listStyle: 'none' }}>
+                <ul style={{ paddingRight: '1rem', listStyle: 'none' }}>
                   <li>پرداخت 50 هزار تومان به دعوت‌کننده</li>
                   <li>و تا سقف 200 هزار تومان به دعوت‌شونده</li>
-                </ul> */}
+                </ul>
               </p>
             </Space>
           </Col>
@@ -356,7 +356,7 @@ export function Index() {
             <img src="/images/code-davat.svg" className="img-fluid" alt="" />
           </Col>
         </Row>
-      </div>
+      </div> */}
       <div className={styles.home__edgeImageArea}>
         <div className="container">
           <Row gutter={32} align="middle">
