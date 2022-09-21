@@ -322,7 +322,7 @@ export function Index() {
           </Row>
         </div>
       </div>
-      <div className="container" style={{ marginTop: 100, marginBottom: 100 }}>
+      {/* <div className="container" style={{ marginTop: 100, marginBottom: 100 }}>
         <Row gutter={[32, 32]} align="middle" justify="space-between">
           <Col lg={13}>
             <Space direction="vertical" size={32}>
@@ -345,10 +345,10 @@ export function Index() {
                 <span style={{ fontWeight: 'bold' }}>
                   و تا سقف 200 هزار تومان به دعوت‌شونده{' '}
                 </span>
-                {/* <ul style={{ paddingRight: '1rem', listStyle: 'none' }}>
+                <ul style={{ paddingRight: '1rem', listStyle: 'none' }}>
                   <li>پرداخت 50 هزار تومان به دعوت‌کننده</li>
                   <li>و تا سقف 200 هزار تومان به دعوت‌شونده</li>
-                </ul> */}
+                </ul>
               </p>
             </Space>
           </Col>
@@ -356,7 +356,7 @@ export function Index() {
             <img src="/images/code-davat.svg" className="img-fluid" alt="" />
           </Col>
         </Row>
-      </div>
+      </div> */}
       <div className={styles.home__edgeImageArea}>
         <div className="container">
           <Row gutter={32} align="middle">
