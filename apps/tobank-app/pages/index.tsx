@@ -19,17 +19,17 @@ export function Index() {
    * Note: The corresponding styles are in the ./index.less file.
    */
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const [isModalNewVisible, setIsModalNewVisible] = useState(false);
+  // const [isModalNewVisible, setIsModalNewVisible] = useState(false);
 
   const [androidAddress, setAndroidAddress] = useState<{
     regular: string;
     armeab: string;
   }>();
 
-  const handleNewCancel = () => {
-    localStorage.setItem('POPUP-REF', JSON.stringify(false));
-    setIsModalNewVisible(false);
-  };
+  // const handleNewCancel = () => {
+  //   localStorage.setItem('POPUP-REF', JSON.stringify(false));
+  //   setIsModalNewVisible(false);
+  // };
 
   const isDesktop = useMediaQuery('(min-width: 1366px)');
 
@@ -64,10 +64,10 @@ export function Index() {
   };
 
   useEffect(() => {
-    const modalRef = localStorage.getItem('POPUP-REF');
-    if (!modalRef) {
-      setIsModalNewVisible(true);
-    }
+    // const modalRef = localStorage.getItem('POPUP-REF');
+    // if (!modalRef) {
+    //   setIsModalNewVisible(true);
+    // }
     fetch(
       `https://appapi.gardeshpay.ir/api/v1.0/config/apps/version/last?type=and&time=${new Date().getTime()}`,
       {
@@ -114,7 +114,7 @@ export function Index() {
 
   return (
     <Space className="w-100" direction="vertical" size={32}>
-      <Modal
+      {/* <Modal
         width={1000}
         onCancel={handleNewCancel}
         visible={isModalNewVisible}
@@ -134,7 +134,7 @@ export function Index() {
         ]}
       >
         <img src="/images/popup-ref.jpg" className="img-fluid" alt="" />
-      </Modal>
+      </Modal> */}
       <div className="container">
         <div className={styles.home__intro}>
           <Row gutter={[32, 43]}>
