@@ -19,17 +19,17 @@ export function Index() {
    * Note: The corresponding styles are in the ./index.less file.
    */
   const [isModalVisible, setIsModalVisible] = useState(false);
-  // const [isModalNewVisible, setIsModalNewVisible] = useState(false);
+  const [isModalNewVisible, setIsModalNewVisible] = useState(false);
 
   const [androidAddress, setAndroidAddress] = useState<{
     regular: string;
     armeab: string;
   }>();
 
-  // const handleNewCancel = () => {
-  //   localStorage.setItem('POPUP-REF', JSON.stringify(false));
-  //   setIsModalNewVisible(false);
-  // };
+  const handleNewCancel = () => {
+    localStorage.setItem('POPUP-REF_Mehrizan', JSON.stringify(false));
+    setIsModalNewVisible(false);
+  };
 
   const isDesktop = useMediaQuery('(min-width: 1366px)');
 
@@ -64,10 +64,10 @@ export function Index() {
   };
 
   useEffect(() => {
-    // const modalRef = localStorage.getItem('POPUP-REF');
-    // if (!modalRef) {
-    //   setIsModalNewVisible(true);
-    // }
+    const modalRef = localStorage.getItem('POPUP-REF_Mehrizan');
+    if (!modalRef) {
+      setIsModalNewVisible(true);
+    }
     fetch(
       `https://appapi.gardeshpay.ir/api/v1.0/config/apps/version/last?type=and&time=${new Date().getTime()}`,
       {
@@ -114,9 +114,17 @@ export function Index() {
 
   return (
     <Space className="w-100" direction="vertical" size={32}>
-      {/* <Modal
+      <Modal
         width={1000}
         onCancel={handleNewCancel}
+        title={[
+          <Text>
+            جشنواره قرعه کشی حساب های قرض الحسنه بانک گردشگری
+            <strong>
+              <Text type="danger">(مهرریزان)</Text>
+            </strong>
+          </Text>,
+        ]}
         visible={isModalNewVisible}
         footer={[
           <Row gutter={16}>
@@ -133,8 +141,8 @@ export function Index() {
           </Row>,
         ]}
       >
-        <img src="/images/popup-ref.jpg" className="img-fluid" alt="" />
-      </Modal> */}
+        <img src="/images/بنر-توبانک.jpg" className="img-fluid" alt="" />
+      </Modal>
       <div className="container">
         <div className={styles.home__intro}>
           <Row gutter={[32, 43]}>
