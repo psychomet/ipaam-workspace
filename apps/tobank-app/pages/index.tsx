@@ -27,7 +27,7 @@ export function Index() {
   }>();
 
   const handleNewCancel = () => {
-    localStorage.setItem('POPUP-REF_Mehrizan', JSON.stringify(false));
+    localStorage.setItem('POPUP-REF_Mehrizan-new', JSON.stringify(false));
     setIsModalNewVisible(false);
   };
 
@@ -64,7 +64,7 @@ export function Index() {
   };
 
   useEffect(() => {
-    const modalRef = localStorage.getItem('POPUP-REF_Mehrizan');
+    const modalRef = localStorage.getItem('POPUP-REF_Mehrizan-new');
     if (!modalRef) {
       setIsModalNewVisible(true);
     }
@@ -141,7 +141,7 @@ export function Index() {
           </Row>,
         ]}
       >
-        <img src="/images/بنر-توبانک.jpg" className="img-fluid" alt="" />
+        <img src="/images/image0.jpeg" className="img-fluid" alt="" />
       </Modal>
       <div className="container">
         <div className={styles.home__intro}>
