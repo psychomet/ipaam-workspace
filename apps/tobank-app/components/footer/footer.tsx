@@ -249,7 +249,7 @@ export function Footer(props: FooterProps) {
           className={cx('py-3', styles.app__layout__powered)}
         >
           <Col>
-            <small>کلیه حقوق این وب‌سایت متعلق به بانک گردشگری است.</small>
+            <small>کلیه حقوق این وب‌سایت متعلق به شرکت ایده پرداز دانش نوین آرشام است.</small>
           </Col>
         </Row>
       </div>
