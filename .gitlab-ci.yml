@@ -33,6 +33,7 @@ build_project:
 
 deploy_project:
   image: localregistry.gardeshpay.ir:5000/sshpass
+  when: manual
   stage: deploy
   only:
     - main
