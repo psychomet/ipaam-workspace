@@ -81,7 +81,6 @@ export function Index() {
       .then(
         (result) => {
           const res = JSON.parse(downupToCode(result.data));
-          console.log('res', res);
           // this.androidAddress = ;
           setAndroidAddress({
             regular: res?.data?.link,
@@ -144,8 +143,20 @@ export function Index() {
         <img src="/images/image0.jpeg" className="img-fluid" alt="" />
       </Modal>
       <div className="container">
+        <a href="#download-panel">
+          <img
+            src="/images/Screen Shot 1401-08-05 at 13.47.45.png"
+            className="img-fluid rounded"
+            style={{marginBottom: 32}}
+            alt=""
+          />
+        </a>
+
         <div className={styles.home__intro}>
           <Row gutter={[32, 43]}>
+            {/*<Col md={24}>*/}
+            {/*  */}
+            {/*</Col>*/}
             <Col md={12} style={{ display: 'flex', justifyContent: 'center' }}>
               <img
                 src="/images/Group%2010353@2x.png"
@@ -414,7 +425,7 @@ export function Index() {
             alt=""
           />
           <Space align="center" direction="vertical" style={{ margin: 30 }}>
-            <span>برای دانلود اسکن کنید</span>
+            <span style={{ fontSize: 13 }}>برای دانلود اسکن کنید</span>
             <a style={{ color: '#000' }} href="www.tobank.ir">
               www.tobank.ir
             </a>
