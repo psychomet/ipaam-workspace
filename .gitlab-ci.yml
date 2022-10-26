@@ -4,6 +4,8 @@ stages: # List of stages for jobs, and their order of execution
   - deploy
 
 install_dependencies:
+  only:
+    - main
   image: localregistry.gardeshpay.ir:5000/node:14-latest
   stage: dependencies
   script:
@@ -16,6 +18,8 @@ install_dependencies:
       - node_modules
 
 build_project:
+  only:
+    - main
   image: localregistry.gardeshpay.ir:5000/node:14-latest
   stage: build
   script:
