@@ -26,7 +26,7 @@ export function Index() {
   }>();
 
   const handleNewCancel = () => {
-    localStorage.setItem('POPUP-REF_tobank-billboard-new', JSON.stringify(false));
+    localStorage.setItem('POPUP-REF_tobank-billboard-new-123123', JSON.stringify(false));
     router.push('#download-panel')
     setIsModalNewVisible(false);
   };
@@ -64,7 +64,7 @@ export function Index() {
   };
 
   useEffect(() => {
-    const modalRef = localStorage.getItem('POPUP-REF_tobank-billboard-new');
+    const modalRef = localStorage.getItem('POPUP-REF_tobank-billboard-new-123123');
     if (!modalRef) {
       setIsModalNewVisible(true);
     }
@@ -131,7 +131,7 @@ export function Index() {
                 size="large"
                 onClick={handleNewCancel}
               >
-                متوجه شدم
+                دانلود اپلیکشن
               </Button>
             </Col>
           </Row>,
@@ -415,8 +415,8 @@ export function Index() {
         <div className={`${styles.home__sectionSix__qr_code}`}>
           <img
             src="/images/qr_code_tobank.png"
-            className={`img-fluid`}
-            alt=""
+            className={"img-fluid"}
+            alt="qr_code"
           />
           <Space align="center" direction="vertical" style={{ margin: 30 }}>
             <span style={{ fontSize: 13 }}>برای دانلود اسکن کنید</span>
