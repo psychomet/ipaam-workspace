@@ -8,9 +8,8 @@ import {
 } from '@ant-design/icons';
 import { Button, Col, Modal, Row, Space, Typography, Badge } from 'antd';
 const { Title, Text } = Typography;
-import cx from 'classnames';
 import { homeData } from '../mocks/home-data';
-import { spawn } from 'child_process';
+import { useRouter } from 'next/router'
 
 export function Index() {
   /*
@@ -20,14 +19,15 @@ export function Index() {
    */
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isModalNewVisible, setIsModalNewVisible] = useState(false);
-
+  const router = useRouter()
   const [androidAddress, setAndroidAddress] = useState<{
     regular: string;
     armeab: string;
   }>();
 
   const handleNewCancel = () => {
-    localStorage.setItem('POPUP-REF_Mehrizan-new', JSON.stringify(false));
+    localStorage.setItem('POPUP-REF_tobank-billboard-new', JSON.stringify(false));
+    router.push('#download-panel')
     setIsModalNewVisible(false);
   };
 
@@ -64,7 +64,7 @@ export function Index() {
   };
 
   useEffect(() => {
-    const modalRef = localStorage.getItem('POPUP-REF_Mehrizan-new');
+    const modalRef = localStorage.getItem('POPUP-REF_tobank-billboard-new');
     if (!modalRef) {
       setIsModalNewVisible(true);
     }
@@ -118,10 +118,7 @@ export function Index() {
         onCancel={handleNewCancel}
         title={[
           <Text>
-            جشنواره قرعه کشی حساب های قرض الحسنه بانک گردشگری
-            <strong>
-              <Text type="danger">(مهرریزان)</Text>
-            </strong>
+            قرعه‌کشی سفر به جام‌جهانی در اپلیکشن توبانک
           </Text>,
         ]}
         visible={isModalNewVisible}
@@ -140,18 +137,15 @@ export function Index() {
           </Row>,
         ]}
       >
-        <img src="/images/image0.jpeg" className="img-fluid" alt="" />
-      </Modal>
-      <div className="container">
-        <a href="#download-panel">
+        <a onClick={handleNewCancel}>
           <img
             src="/images/Screen Shot 1401-08-05 at 13.47.45.png"
             className="img-fluid rounded"
-            style={{marginBottom: 32}}
             alt=""
           />
         </a>
-
+      </Modal>
+      <div className="container">
         <div className={styles.home__intro}>
           <Row gutter={[32, 43]}>
             {/*<Col md={24}>*/}
