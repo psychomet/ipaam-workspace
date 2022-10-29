@@ -178,6 +178,10 @@ export function Navbar({ menu }) {
                 <Link href="https://gardeshpay.ir/pos">POS</Link>
               </Menu.Item>
             </Menu.SubMenu>
+
+            <Menu.Item key="14">
+              <a href="https://giftcard.tobank.ir/" target="_blank">کارت هدیه</a>
+            </Menu.Item>
             <Menu.Item key="9">
               <Link href="/terms">قوانین و مقررات</Link>
             </Menu.Item>
@@ -185,6 +189,8 @@ export function Navbar({ menu }) {
             <Menu.Item key="13">
               <Link href="/about-us">درباره ما</Link>
             </Menu.Item>
+
+
           </Menu>
         </div>
         {isDesktop && (
@@ -251,6 +257,9 @@ export function Navbar({ menu }) {
               <Link href="https://gardeshpay.ir/pos">POS</Link>
             </Menu.Item>
           </SubMenu>
+          <Menu.Item key="14">
+            <a href="https://giftcard.tobank.ir/" target="_blank">کارت هدیه</a>
+          </Menu.Item>
           <Menu.Item key="9">
             <Link href="/terms">قوانین و مقررات</Link>
           </Menu.Item>
