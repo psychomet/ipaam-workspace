@@ -210,34 +210,41 @@ export function Index() {
           </Row>
         </div>
       </div>
-      <div className="container" style={{ marginTop: 100 }}>
-        <Row gutter={[32, 32]} align="middle" justify="space-between">
-          <Col lg={8}>
-            <Space
-              direction="vertical"
-              size={32}
-              className={styles.home__sectionSix__color_cards}
-            >
+      <div className={styles.section_card}>
+        <img
+          src="/images/Wave 1.png"
+          className={styles.image_card}
+          alt=""
+        />
+        <div className="container" style={{ marginTop: 100 }}>
+          <Row gutter={[32, 32]} align="middle" justify="space-between">
+            <Col lg={8}>
+              <Space
+                direction="vertical"
+                size={32}
+                className={styles.home__sectionSix__color_cards}
+              >
               <span className={styles.home__sectionFour__title}>
                 انتخاب رنگ دلخواه شما
               </span>
-              <Text className={styles.home__sectionFour__text}>
-                علاوه بر کارت‌های متنوع بانک گردشگری، رنگ کارت بانکی خودتون رو
-                نیز انتخاب کنید.
-              </Text>
-              <Space>
-                <img
-                  src="/images/رنگ کارت های بانکی.png"
-                  alt="pic"
-                  className="img-fluid"
-                />
+                <Text className={styles.home__sectionFour__text}>
+                  علاوه بر کارت‌های متنوع بانک گردشگری، رنگ کارت بانکی خودتون رو
+                  نیز انتخاب کنید.
+                </Text>
+                <Space>
+                  <img
+                    src="/images/رنگ کارت های بانکی.png"
+                    alt="pic"
+                    className="img-fluid"
+                  />
+                </Space>
               </Space>
-            </Space>
-          </Col>
-          <Col>
-            <img src="/images/Group 10421.png" className="img-fluid" alt="" />
-          </Col>
-        </Row>
+            </Col>
+            <Col>
+              <img src="/images/Group 10421.png" style={{ width: '500px'}} className="img-fluid" alt="" />
+            </Col>
+          </Row>
+        </div>
       </div>
       <div className="container" style={{ zIndex: 500, marginTop: 100 }}>
         <Space direction="vertical" size={56} align="center">
@@ -260,6 +267,33 @@ export function Index() {
           </Row>
         </Space>
       </div>
+      <div className={styles.section_card}>
+        <img
+          src="/images/Wave 2.png"
+          className={styles.image_back_section_four}
+          alt=""
+        />
+        <div className="container" style={{ marginTop: 100 }}>
+          <Row gutter={[32, 32]} align="middle" justify="space-between">
+            <Col>
+              <img src="/images/Gift Card.png" className="img-fluid" alt="" />
+            </Col>
+            <Col lg={8}>
+              <Space
+                direction="vertical"
+                size={32}
+                className={styles.home__sectionSix__color_cards}
+              >
+              <span className={styles.home__sectionFour__title}>
+               هدیه‌ای مناسب برای دوستانتان !
+              </span>
+                <Text className={styles.home__sectionFour__text}>کارت هدیه خودتو شخصی‌سازی کن و با تصویر و متن دلخواه سفارش بده. به علاوه می‌تونی از طرح‌های متنوع و آماده هم استفاده کنی
+                </Text>
+              </Space>
+            </Col>
+          </Row>
+        </div>
+      </div>
       <div
         className={`container`}
         style={{ marginTop: 100, position: 'relative', overflow: ' hidden' }}
@@ -275,21 +309,7 @@ export function Index() {
             <img src="/images/background.png" alt="pic" className="img-fluid" />
           </div>
 
-          <Row gutter={[0, 32]}>
-            <Col
-              md={{ span: 8 }}
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                width: '100%',
-              }}
-            >
-              <img
-                src="/images/newcustomer.png"
-                className={`img-fluid`}
-                alt=""
-              />
-            </Col>
+          <Row gutter={[0, 32]} className={styles.row_reverse}>
             <Col md={{ span: 14, offset: 2 }}>
               <Row>
                 <Space
@@ -333,6 +353,20 @@ export function Index() {
                   </Col>
                 ))}
               </Row>
+            </Col>
+            <Col
+              md={{ span: 8 }}
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                width: '100%',
+              }}
+            >
+              <img
+                src="/images/newcustomer.png"
+                className={`img-fluid`}
+                alt=""
+              />
             </Col>
           </Row>
         </div>
