@@ -49,4 +49,4 @@ deploy_project:
     - ssh-add key
   script:
     - scp -i key -o stricthostkeychecking=no -r dist hadi@192.168.150.1:/home/negar
-    - ssh -i key -o stricthostkeychecking=no hadi@192.168.150.1 " sudo cp -r /home/negar/dist /var/www/tobank-test && sudo chown www-data:www-data dist/ -R "
+    - ssh -i key -o stricthostkeychecking=no hadi@192.168.150.1 " sudo cp -r /home/negar/dist /var/www/tobank-test && sudo chown www-data:www-data /var/www/tobank-test/dist -R "
