@@ -48,4 +48,5 @@ deploy_project:
     - chmod 600 key
     - ssh-add key
   script:
-    - scp -i key -o stricthostkeychecking=no -r dist hadi@192.168.150.1:/var/www/tobank-test
+    - scp -i key -o stricthostkeychecking=no -r dist hadi@192.168.150.1:/home/negar
+    - ssh -i key -o stricthostkeychecking=no hadi@192.168.150.1 " sudo cp -r /home/negar/dist /var/www/tobank-test"
