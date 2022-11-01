@@ -3,13 +3,14 @@ import { useEffect, useState } from 'react';
 import { useMediaQuery } from '../hooks';
 import {
   DownloadOutlined,
-  LeftCircleOutlined,
   InfoCircleFilled,
+  LeftCircleOutlined,
 } from '@ant-design/icons';
-import { Button, Col, Modal, Row, Space, Typography, Badge } from 'antd';
-const { Title, Text } = Typography;
+import { Badge, Button, Col, Modal, Row, Space, Typography } from 'antd';
 import { homeData } from '../mocks/home-data';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
+
+const { Title, Text } = Typography;
 
 export function Index() {
   /*
@@ -19,15 +20,18 @@ export function Index() {
    */
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isModalNewVisible, setIsModalNewVisible] = useState(false);
-  const router = useRouter()
+  const router = useRouter();
   const [androidAddress, setAndroidAddress] = useState<{
     regular: string;
     armeab: string;
   }>();
 
   const handleNewCancel = () => {
-    localStorage.setItem('POPUP-REF_tobank-billboard-new', JSON.stringify(false));
-    router.push('#download-panel')
+    localStorage.setItem(
+      'POPUP-REF_tobank-billboard-new',
+      JSON.stringify(false)
+    );
+    router.push('#download-panel');
     setIsModalNewVisible(false);
   };
 
@@ -116,11 +120,7 @@ export function Index() {
       <Modal
         width={1000}
         onCancel={handleNewCancel}
-        title={[
-          <Text>
-            قرعه‌کشی سفر به جام‌جهانی در اپلیکشن توبانک
-          </Text>,
-        ]}
+        title={[<Text>قرعه‌کشی سفر به جام‌جهانی در اپلیکشن توبانک</Text>]}
         visible={isModalNewVisible}
         footer={[
           <Row gutter={16}>
@@ -151,7 +151,13 @@ export function Index() {
             {/*<Col md={24}>*/}
             {/*  */}
             {/*</Col>*/}
-            <Col md={12} style={{ display: 'flex', justifyContent: 'center' }}>
+            <Col
+              md={12}
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+              }}
+            >
               <img
                 src="/images/Group%2010353@2x.png"
                 className="img-fluid"
@@ -164,7 +170,10 @@ export function Index() {
                 <Row>
                   <Title
                     level={!isDesktop ? 3 : 1}
-                    style={{ fontSize: '30px', fontWeight: 'bolder' }}
+                    style={{
+                      fontSize: '30px',
+                      fontWeight: 'bolder',
+                    }}
                   >
                     <span className="primary-color">TOBANK،</span> یک شعبه مجازی
                     همراه شماست!
@@ -183,8 +192,9 @@ export function Index() {
                     <br />
                     از احراز هویت آنلاین و افتتاح سپرده آنی گرفته تا صندوق
                     سرمایه‌گذاری و ثبت‌نام وام ازدواج.
-                    <br/>
-                    خدمتی از شرکت دانش‌بنیان ایده پرداز دانش نوین آرشام، زیر‌مجموعه بانک گردشگری.
+                    <br />
+                    خدمتی از شرکت دانش‌بنیان ایده پرداز دانش نوین آرشام،
+                    زیر‌مجموعه بانک گردشگری.
                   </Text>
                 </Row>
                 <Row className={`${styles.home__resBtn} flex-container`}>
@@ -210,34 +220,41 @@ export function Index() {
           </Row>
         </div>
       </div>
-      <div className="container" style={{ marginTop: 100 }}>
-        <Row gutter={[32, 32]} align="middle" justify="space-between">
-          <Col lg={8}>
-            <Space
-              direction="vertical"
-              size={32}
-              className={styles.home__sectionSix__color_cards}
-            >
-              <span className={styles.home__sectionFour__title}>
-                انتخاب رنگ دلخواه شما
-              </span>
-              <Text className={styles.home__sectionFour__text}>
-                علاوه بر کارت‌های متنوع بانک گردشگری، رنگ کارت بانکی خودتون رو
-                نیز انتخاب کنید.
-              </Text>
-              <Space>
-                <img
-                  src="/images/رنگ کارت های بانکی.png"
-                  alt="pic"
-                  className="img-fluid"
-                />
+      <div className={styles.section_card}>
+        <img src="/images/Wave 1.png" className={styles.image_card} alt="" />
+        <div className="container" style={{ marginTop: 100 }}>
+          <Row gutter={[32, 32]} align="middle" justify="space-between">
+            <Col lg={8}>
+              <Space
+                direction="vertical"
+                size={32}
+                className={styles.home__sectionSix__color_cards}
+              >
+                <span className={styles.home__sectionFour__title}>
+                  انتخاب رنگ دلخواه شما
+                </span>
+                <Text className={styles.home__sectionFour__text}>
+                  علاوه بر کارت‌های متنوع بانک گردشگری، رنگ کارت بانکی خودتون رو
+                  نیز انتخاب کنید.
+                </Text>
+                <Space>
+                  <img
+                    src="/images/رنگ کارت های بانکی.png"
+                    alt="pic"
+                    className="img-fluid"
+                  />
+                </Space>
               </Space>
-            </Space>
-          </Col>
-          <Col>
-            <img src="/images/Group 10421.png" className="img-fluid" alt="" />
-          </Col>
-        </Row>
+            </Col>
+            <Col>
+              <img
+                src="/images/Group 10421.png"
+                className={styles.image_colorful}
+                alt=""
+              />
+            </Col>
+          </Row>
+        </div>
       </div>
       <div className="container" style={{ zIndex: 500, marginTop: 100 }}>
         <Space direction="vertical" size={56} align="center">
@@ -260,9 +277,42 @@ export function Index() {
           </Row>
         </Space>
       </div>
+      <div className={styles.section_card}>
+        <img
+          src="/images/Wave 2.png"
+          className={styles.image_back_section_four}
+          alt=""
+        />
+        <div className="container" style={{ marginTop: 100 }}>
+          <Row gutter={[32, 32]} align="middle" justify="space-between">
+            <Col>
+              <img src="/images/Gift Card.png" className="img-fluid" alt="" />
+            </Col>
+            <Col lg={8}>
+              <Space
+                direction="vertical"
+                size={32}
+                className={styles.home__sectionSix__color_cards}
+              >
+                <span className={styles.home__sectionFour__title}>
+                  هدیه‌ای مناسب برای دوستانتان !
+                </span>
+                <Text className={styles.home__sectionFour__text}>
+                  کارت هدیه خودتو شخصی‌سازی کن و با تصویر و متن دلخواه سفارش
+                  بده. به علاوه می‌تونی از طرح‌های متنوع و آماده هم استفاده کنی
+                </Text>
+              </Space>
+            </Col>
+          </Row>
+        </div>
+      </div>
       <div
         className={`container`}
-        style={{ marginTop: 100, position: 'relative', overflow: ' hidden' }}
+        style={{
+          marginTop: 100,
+          position: 'relative',
+          overflow: ' hidden',
+        }}
       >
         <div className={`${styles.sectionCustomers}`}>
           <div
@@ -275,21 +325,7 @@ export function Index() {
             <img src="/images/background.png" alt="pic" className="img-fluid" />
           </div>
 
-          <Row gutter={[0, 32]}>
-            <Col
-              md={{ span: 8 }}
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                width: '100%',
-              }}
-            >
-              <img
-                src="/images/newcustomer.png"
-                className={`img-fluid`}
-                alt=""
-              />
-            </Col>
+          <Row gutter={[0, 32]} className={styles.row_reverse}>
             <Col md={{ span: 14, offset: 2 }}>
               <Row>
                 <Space
@@ -333,6 +369,20 @@ export function Index() {
                   </Col>
                 ))}
               </Row>
+            </Col>
+            <Col
+              md={{ span: 8 }}
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                width: '100%',
+              }}
+            >
+              <img
+                src="/images/newcustomer.png"
+                className={`img-fluid`}
+                alt=""
+              />
             </Col>
           </Row>
         </div>
