@@ -1,10 +1,10 @@
 import styles from './footer.module.less';
-import { useMediaQuery } from '../../hooks';
-import { Col, Row, Space, Divider } from 'antd';
+import {useMediaQuery} from '../../hooks';
+import {Col, Divider, Row, Space} from 'antd';
 import {
-  PhoneOutlined,
-  MailOutlined,
   EnvironmentOutlined,
+  MailOutlined,
+  PhoneOutlined,
 } from '@ant-design/icons';
 import cx from 'classnames';
 import Link from 'next/link';
@@ -155,7 +155,7 @@ export function Footer(props: FooterProps) {
                       )
                     }
                     alt="logo-samandehi"
-                    src="/assets/Group 10387.png"
+                    src="https://logo.samandehi.ir/logo.aspx?id=312611&p=qftinbpdodrfwlbqnbpdnbpd"
                   />
                   <a
                     href={
@@ -164,7 +164,7 @@ export function Footer(props: FooterProps) {
                     className={styles.app__layout__footer__intro_small_text}
                   >
                     <img
-                      src="/assets/saramad-logo.svg"
+                      src="/images/Group 10387@2x.png"
                       style={{ height: '100px' }}
                       alt=""
                     />
