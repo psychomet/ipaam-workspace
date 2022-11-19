@@ -1,10 +1,10 @@
 import styles from './footer.module.less';
-import { useMediaQuery } from '../../hooks';
-import { Col, Row, Space, Divider } from 'antd';
+import {useMediaQuery} from '../../hooks';
+import {Col, Divider, Row, Space} from 'antd';
 import {
-  PhoneOutlined,
-  MailOutlined,
   EnvironmentOutlined,
+  MailOutlined,
+  PhoneOutlined,
 } from '@ant-design/icons';
 import cx from 'classnames';
 import Link from 'next/link';
@@ -143,7 +143,10 @@ export function Footer(props: FooterProps) {
                   <img
                     referrerPolicy={'origin'}
                     id="rgvjjxlznbqefukzjxlzjxlz"
-                    style={{ cursor: 'pointer', height: '100px' }}
+                    style={{
+                      cursor: 'pointer',
+                      height: '100px',
+                    }}
                     onClick={() =>
                       window.open(
                         'https://logo.samandehi.ir/Verify.aspx?id=312611&p=xlaorfthuiwkgvkarfthrfth',
@@ -161,7 +164,7 @@ export function Footer(props: FooterProps) {
                     className={styles.app__layout__footer__intro_small_text}
                   >
                     <img
-                      src="/assets/saramad-logo.svg"
+                      src="/images/Group 10387@2x.png"
                       style={{ height: '100px' }}
                       alt=""
                     />
@@ -180,7 +183,10 @@ export function Footer(props: FooterProps) {
             <Col xs={24} md={{ span: 8 }}>
               <span
                 className={`styles.app__layout__footer__list_text`}
-                style={{ display: 'flex', justifyContent: 'center' }}
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                }}
               >
                 ما را در شبکه های اجتماعی دنبال کنید
               </span>
@@ -249,7 +255,10 @@ export function Footer(props: FooterProps) {
           className={cx('py-3', styles.app__layout__powered)}
         >
           <Col>
-            <small>کلیه حقوق این وب‌سایت متعلق به شرکت ایده پرداز دانش نوین آرشام است.</small>
+            <small>
+              کلیه حقوق این وب‌سایت متعلق به شرکت ایده پرداز دانش نوین آرشام
+              است.
+            </small>
           </Col>
         </Row>
       </div>
