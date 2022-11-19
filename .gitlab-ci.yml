@@ -5,7 +5,7 @@ stages: # List of stages for jobs, and their order of execution
 
 install_dependencies:
   only:
-    - develop
+    - main
   image: localregistry.gardeshpay.ir:5000/node:14-latest
   stage: dependencies
   script:
@@ -19,7 +19,7 @@ install_dependencies:
 
 build_project:
   only:
-    - develop
+    - main
   image: localregistry.gardeshpay.ir:5000/node:14-latest
   stage: build
   script:
@@ -37,16 +37,17 @@ build_project:
 
 deploy_project:
   image: localregistry.gardeshpay.ir:5000/sshpass
+  when: manual
   stage: deploy
   only:
-    - develop
+    - main
   before_script:
     - eval $(ssh-agent -s)
     - echo '-----BEGIN RSA PRIVATE KEY-----' > key
-    - echo $ssh_key | tr ' ' '\n' >> key
+    - echo $SSH_KEY | tr ' ' '\n' >> key
     - echo '-----END RSA PRIVATE KEY-----' >> key
     - chmod 600 key
     - ssh-add key
   script:
-    - scp -i key -o stricthostkeychecking=no -r dist hadi@192.168.150.1:/home/negar
-    - ssh -i key -o stricthostkeychecking=no hadi@192.168.150.1 " sudo cp -r /home/negar/dist /var/www/tobank-test && sudo chown www-data:www-data /var/www/tobank-test/dist -R "
+    - scp -P $DESTPORT -i key -o stricthostkeychecking=no -r dist $DESTUSER@$DESTIP:$DESTPATH
+    - scp -P $DESTPORT -i key -o stricthostkeychecking=no -r dist $DESTUSER@$DESTIP2:$DESTPATH
