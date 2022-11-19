@@ -68,10 +68,10 @@ export function Index() {
   };
 
   useEffect(() => {
-    const modalRef = localStorage.getItem('POPUP-REF_tobank-billboard-new');
-    if (!modalRef) {
-      setIsModalNewVisible(true);
-    }
+    // const modalRef = localStorage.getItem('POPUP-REF_tobank-billboard-new');
+    // if (!modalRef) {
+    //   setIsModalNewVisible(true);
+    // }
     fetch(
       `https://appapi.gardeshpay.ir/api/v1.0/config/apps/version/last?type=and&time=${new Date().getTime()}`,
       {
