@@ -2,86 +2,115 @@
 
 
 import styles from './index.module.less';
-import {Card, Col, Divider, Layout, List, PageHeader, Row, Space, Typography} from 'antd';
+import {Card, Col, Descriptions, Divider, Layout, PageHeader, Row, Typography} from 'antd';
 import classNames from 'classnames';
 const { Content } = Layout;
 const { Title,Text } = Typography;
 /* eslint-disable-next-line */
 export interface MarriageLoanAmountConditionsProps {}
-const data = [
-  '۱ . سایت گردش پی در ایران مدیریت‌ شده و تابع قوانین جمهوری اسلامی ایران است. لذا چنانچه کاربری اقدام به انتقال وجه و یا خرید و فروش محصولات غیرقانونی کند اطلاعات وی به مراجع ذیصلاح ارجاع داده خواهد شد.',
-  '۲ . علاوه بر خرید و فروش موارد خلاف قوانین جمهوری اسلامی ایران در گردش پی، خرید و فروش پول، وجوه مالی و اوراق بهادار (مبادله پول با پول) نیز در گردش پی ممنوع می‌باشد. به طور مثال دریافت وجه ریالی و یا تومانی درون گردش پی و پرداخت دلاری از طریق پی‌پال در گردش پی ممنوع می‌باشد و در صورت مشاهده، حساب کاربری کاربران خاطی مسدود خواهد شد. ',
-  '۳ . استفاده از سرویس گردش پی در سایت‌هایی که دارای مضامین غیرقانونی، مضر، تهدیدکننده، توهین‌آمیز، زیان‌آور، غیراخلاقی، افترا‌آمیز و مبتذل باشد و همینطور سایت‌هایی که به نژاد، گروه و یا دسته خاصی از مردم توهین کرده باشند مجاز نمی‌باشد و در صورت مشاهده، شناسه کاربری خاطی توقیف خواهد شد. ',
-  ' ۴ . استفاده از سرویس گردش پی به منظور خرید و فروش غیرقانونی محصولات دارای حق چاپ و نشر (copyright) مجاز نمی‌باشد و در صورت مشاهده و یا گزارش، شناسه کاربری خاطی متوقف خواهد شد. ',
-  ' ۵ . استفاده از سرویس گردش پی در سایت‌های حراج و مزایده ممنوع می‌باشد.',
-];
+
 
 export function MarriageLoanAmountConditions(props: MarriageLoanAmountConditionsProps) {
   return (
     <div>
       <PageHeader
-        title={
-          <Title className={classNames(styles.rules__title, 'primary-color')}>
-            مبالغ تسهیلات ازدواج
-          </Title>
-        }
-      >
-        <Content>
-          <Card title="مبالغ تسهیلات ازدواج">
-
-                <Row justify="space-between" gutter={[30,10]} className='my-2'>
-                  <Col span={16}>
-                    <Text>
-
-                    </Text>
-                    مبلغ تسهیلات:
-                  </Col>
-                  <Col span={8}>
-                    <Row justify='end'>
-                      1،200،000،000ریال
-                    </Row>
-
-
-                  </Col>
-                </Row>
-
-
-                <Row justify="space-between" gutter={[30,10]} className='my-2'>
-                  <Col span={16}>
-                    مبلغ گواهی کسر از حقوق:
-                  </Col>
-                  <Col span={8}>
-                    <Row justify='end'>
-                      1،464،000،000ریال
-
-                    </Row>
-
-                  </Col>
-                </Row>
-                <Row justify="space-between" gutter={[30,10]} className='my-2'>
-                  <Col span={16}>
-                    مدت:
-                  </Col>
-                  <Col span={8}>
-                    <Row justify='end'>
-
-                        120 ماه
-
-
-                    </Row>
-
-                  </Col>
-
-                </Row>
-            <Row>
-              <Text>
-
-              </Text>
-            </Row>
-
-          </Card>
-        </Content>
+        title=' تسهیلات قرض‌الحسنه ازدواج'>
       </PageHeader>
+
+      <Content className='my-4'>
+          <Row gutter={[20,20]}>
+            <Col md={12} >
+              <Descriptions title="User Info" column={1}>
+
+                  <Descriptions.Item label="UserName">Zhou Maomao</Descriptions.Item>
+
+                  <Descriptions.Item label="Telephone">1810000000 توضیحات:</Descriptions.Item>
+
+                <Descriptions.Item label="Live">Hangzhou, Zhejiang</Descriptions.Item>
+                <Descriptions.Item label="Remark">empty</Descriptions.Item>
+                <Descriptions.Item label="Address">
+                  No. 18, Wantang Road, Xihu District, Hangzhou, Zhejiang, China
+                </Descriptions.Item>
+              </Descriptions>
+            </Col>
+            <Col md={12}>
+              <Card title="مبالغ تسهیلات ازدواج">
+                <Row>
+                  <Col>
+                    <p>
+                      <Text strong>مبلغ تسهیلات: </Text>
+                      1،500،000،000ریال
+                    </p>
+                    <p>
+                      <Text strong>مبلغ گواهی کسر از حقوق: </Text>
+                      1،830،000،000ریال</p>
+                    <p>
+                      <Text strong> مدت: </Text>
+                      120 ماه
+                    </p>
+                  </Col>
+                  <Col>
+                    <Divider/>
+                    <Text strong>توضیحات: </Text>
+                    توضیحات: به استناد مفاد جزء (1) بند (الف) تبصره 16 قانون بودجه سال 1401 کل کشور، به متقاضیانی که سن ازدواج آنها در زوج ها زیر 25 سال و در زوجه ها زیر 23 سال می باشد، مبلغ 150 ميليون تومان تسهیلات قرض‌الحسنه ازدواج تعلق می گیرد.
+                  </Col>
+                </Row>
+              </Card>
+            </Col>
+            <Col md={12}>
+              <Card title="مبالغ تسهیلات ازدواج">
+                <Row>
+                  <Col>
+                    <p>
+                      <Text strong>مبلغ تسهیلات: </Text>
+                      2،400،000،000ریال
+                    </p>
+                    <p>
+                      <Text strong>مبلغ گواهی کسر از حقوق: </Text>
+                      2،928،000،000ریال</p>
+                    <p>
+                      <Text strong> مدت: </Text>
+                      120 ماه
+                    </p>
+                  </Col>
+                  <Col>
+                    <Divider/>
+                    <Text strong>توضیحات: </Text>
+                    توضیحات:  به استناد مفاد جزء (1) بند (الف) تبصره 16 قانون بودجه سال 1401 کل کشور،  به هر یک از زوجین که مشمول ماده (50) قانون جامع خدمات رساني به ايثارگران باشند، مبلغ  240 ميليون تومان تسهیلات قرض‌الحسنه ازدواج تعلق می‌گیرد.                  </Col>
+                </Row>
+              </Card>
+            </Col>
+            <Col md={12}>
+              <Card title="مبالغ تسهیلات ازدواج">
+                <Row>
+                  <Col>
+                    <p>
+                      <Text strong>مبلغ تسهیلات: </Text>
+                      3،000،000،000ریال
+                    </p>
+                    <p>
+                      <Text strong>مبلغ گواهی کسر از حقوق: </Text>
+                      3،660،000،000ریال</p>
+                    <p>
+                      <Text strong> مدت: </Text>
+                      120 ماه
+                    </p>
+                  </Col>
+                  <Col>
+                    <Divider/>
+                    <Text strong>توضیحات: </Text>
+                    توضیحات:  به استناد مفاد جزء (1) بند (الف) تبصره 16 قانون
+                    بودجه سال 1401 کل کشور، به متقاضیانی که سن ازدواج آنها
+                    در زوج ها زیر 25 سال و در زوجه ها زیر 23 سال می باشد و
+                    مشمول ماده (50) قانون جامع خدمات رساني به ايثارگران
+                    باشند، مبلغ  300 ميليون تومان تسهیلات قرض‌الحسنه ازدواج
+                    تعلق می گیرد.                  </Col>
+                </Row>
+              </Card>
+            </Col>
+          </Row>
+
+        </Content>
     </div>
   );
 }
